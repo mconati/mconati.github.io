@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MOSFETs</title>
+    </head>
+    <body>
+        <h4>Up</h4>
+
+        <li>
+            <a href="./electronics.html">Electronics </a> 
+        </li>
+        <h4>Also</h4>
+        <li>
+            Understanding the MOSFET requires understanding <a href="./PN.html">diodes and PN junctions </a>. 
+        </li>
+        Here is an Enhancement type MOSFET:
+        <img src="./Images/MOSFET.PNG" alt="Italian Trulli">
+        <p></p>
+
+        
+        <h2>Overall Idea</h2>
+        The idea of a MOSFET is that applying a voltage to the gate changes the behavior between the source and drain. In an n-channel Enhancement mode MOSFET (shown above),
+        no current can flow without a gate voltage. This is the case because the positive terminal of the battery will reverse bias the PN junction, increasing the size of the depletion region.
+
+        The way around this issue is to apply a voltage to the gate. The substrate (in this example P-type) has both holes as majority charge carriers and holes as minority charge carriers.
+        When the positive terminal is connected to the gate, an electric field is formed due to the build up of charge on the metal electrode. The electric field attracts electrons, creating a channel of N-Type material near the insulator. 
+        Another way to think of this process is that the electrode and insulator act like the top plate and dialectric in a capacitor, and the n-type channel forms as a charge must build up on the capacitor's "bottom plate". Now that there is a pure n-type channel, 
+        there is no depletion region and the large current Ids can flow. 
+
+        The other variations of MOSFET are P-Channel and Depletion type. P-Channel flips the 
+        <p></p>
+        <img src="./Images/MOSFET2.PNG" alt="Italian Trulli">
+        <p></p>
+    </body>
+    
+</html>

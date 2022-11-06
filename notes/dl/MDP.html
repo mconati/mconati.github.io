@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Template</title>
+    </head>
+    <body>
+        <h4>Up</h4>
+        <li>
+            <a href="./DL.html">Deep Learning</a> 
+        </li>
+        <h2>Overall Idea</h2>
+        A Markov process is one where the dynamics can be described entirely by a finite set of states and transition probabilities. In this system, the behavior at each timestep depends only on the previous timestep. (I.E state(t) depends only on state(t-1), not state(t-100)).
+        <p></p>
+        This sort of system can entirely be described by a 2d array of transition probabilities, where each row/column represents a state. Here is an example from David Silver's course, where C1, C2, ... are states and everything left blank has P=0:
+        <p></p>
+        <img src="./Images/MDP.PNG" alt="Italian Trulli">
+        In reinforcement learning, MPs become interesting when rewards are added(MRPs). For a given trajectory, the reward is defined as the discounted total reward from time-step t. This is formulated by summing the reward at the immediate timestep and the discounted reward at the following timestep:
+        $$G = \sum_{k=0}^{inf}\gamma^{k}R_{t+k+1} = R_{t+1} + \gamma R_{t+2}$$
+        So, gamma close to 1 doesn't discount further reward. Motivation for discounting is that our model is imperfect, so estimated future rewards are uncertain. Also not discounting can cause infinite return loops. 
+        <p></p>
+
+
+
+        While the immediate rewards are random (determined by state probabilities), the value of each state is not. The value is given by the expectation of each state. The foundation of RL is the Bellman equation, 
+        which says that the value of a state is given by the immediate reward at the current state plus the value of possible next states(weighted by their probabilities). In matrix form this is:
+        <p> </p>
+        <img src="./Images/Bellman.PNG" alt="Italian Trulli">
+        <p></p>
+        Intuitively, this makes sense. E.G, if a student is in a state with reward 1, and has a 60% chance of getting good sleep(state with value 2) and 40% chance of playing video games all night(state with value -3), the value of their state is:
+        $$V = 1(immediate reward) + .6*2 (sleep) + .4 *-3 (video games) = 1$$
+        With this equation, we can propagate terminal state values back to intermediate states. Also, the matrix can be solved directly(inverted), but this is a O(states^3) operation. For largy systems, we can instead:
+        <li>
+            <a href="./DP.html">Dynamic Programming</a> 
+        </li>
+        <li>
+            <a href="./MC.html">Monte Carlo</a> 
+        </li>
+        <li>
+            <a href="./TDL.html">Temporal Difference Learning</a> 
+        </li>
+        <p></p>
+        MDPs are a case of MRPs where transitions are determined by decisions instead of chance. Here, actions are taken in accordance with a policy:
+        $$\pi (a|s) = P[A_t = a | S_t = s]$$
+        In non  math terms, a policy assigns probabilities to state-transition actions based on the current state S. Deciding on a policy reduces an MDP to an MRP!
+
+        <p></p>
+    </body>
+
+</html>

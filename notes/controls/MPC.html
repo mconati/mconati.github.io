@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Model Predictive Control</title>
+    </head>
+    <body>
+        <h4>Up</h4>
+        <li>
+            <a href="./controls.html">Controls </a> 
+        </li>
+        <h2>MPC - Overall Idea</h2>
+        State Space techniques rely on current state and previous outputs. Here, we want to incorporate future beliefs with knowledge of the model.
+        <h4>Loss, model, and constraints</h4>
+        We predict a trajectory with our model, and assign a cost:
+
+        $$Loss = \sum^T_{t=0}g(x_t, u_t) $$
+        Where g gives some trajectory loss corresponding to the inputs u and and states x at all times in the trajectory t={0,T}
+        E.G: A weighted sum of errors and actuator demands (like LQR)
+
+        <p>The model gives a predictive representation of the dynamics:
+        $$x_{t+1} = x_t + \delta t * dynamics$$
+        E.G:
+        $$x_{t+1} = x_t + \delta t * v_t$$
+        </p>
+        <p>The constraints encode domains of allowed states and inputs. E.G:
+            $$U_t = [u| a_{min} <= a <= a_{max}]$$ Stay within acceleration bounds
+            $$X_t = [x| p_{x}^2 + p_y^2 <=1]$$ Stay within 1m of origin
+        </p>
+        <h4>Formulation</h4>
+        Minimize the trajectory cost that does not violate constraints:
+        $$min_{x_{1:T}, u_{1:T}}$$ subject to $$x_{t+1} = f(x_t, u_t) ; u = [U_t]; x = [X_t]; x_1 = X_0$$
+        
+        <h4>Practical Solving</h4>
+        In general, there is no closed form solution. Solving is done in <a href = "https://web.casadi.org/">CasADi</a> (Python, C++, Matlab)
+        <h4>Considerations</h4>
+        <li>Long term trajectories are expensive to compute</li>
+        <li>Model errors will accumulate over time</li>
+        <b>Solution</b>: Only run for a short horizon, query the system, and reevaluate. There is a tradeoff between shortsighted behavior and computation(E.G accelerating too close to a turn we can't see and overshooting). A possible solution is a zero-velocity end condition.
+        
+        <p><li>Complexity increases accuracy, but makes calculation difficult</li>
+        <li>Identifying system characteristics like friction and drag are difficult</li>
+        <b>Solution: </b> Determine unknown parameters by collecting real system behavior, and optimizing parameters relative to the real behavior
+        </p>
+    </body>
+
+</html>

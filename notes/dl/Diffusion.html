@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Template</title>
+    </head>
+    <body>
+        <h4>Up</h4>
+        <li>
+            <a href="./DL.html">Deep Learning</a> 
+        </li>
+        <h2>Overall Idea</h2>
+        The overall idea behind diffusion is to create novel images from a noising/denoising process. This process has four components: a forward noising, backward denoising, conditioning, and classifier-free guidance.
+        The loop for generating a new image is as follows:
+        <li>
+            Create a dataset by noising known images in 'n' steps
+        </li>
+        <li>
+            Train a model to denoise the image given n and conditioning caption
+        </li>
+        <li>
+            Now novel generation can start. Generate an image of pure noise (I.E T=100 steps of noise)
+        </li>
+        <li>
+            Pass the noise into the the model twice, once with conditioning caption and once without
+        </li>
+        <li>
+            Amplify the difference between the two model outputs (classifier free guidance) and subtract noise
+        </li>
+        <li>
+            The resultant image is the first version T0. Add back noise through T=99 (1 less than above) steps of noising
+        </li>
+        <li>
+            Repeat noise subtraction process 100 times until a refined T0 is created
+        </li>
+        <img src="./Images/Gen.PNG" alt="Italian Trulli">
+        <p></p>
+        <b>Forward noising process HL: </b>
+        The forward noising process involves adding Gaussian noise to an image in a step by step process. The motivation is to have a controllable function that can x steps of noise to an image, where the amount of noise per step is determined by a scheduler. The backward process can then be trained to undo the noising process
+        <p></p>
+        <b>Forward math: </b>
+        Gaussian noise is added with the following relationship:
+        $$q(x_t|x_{t-1}) = \mathcal{N}(x_t; \sqrt{1-B_t}x_{t-1}; B_tI)$$
+        Where B is a noise coefficient. B is confined to the range {0,1}, and varies within that range according to a shedule. An example schedule is a linear schedule, where B varies linearly (e.g between 0.0001 and 0.02) over T=100 steps. 
+        Intuitively, this noising process is slowly adjusting the new mean to be at zero and the new variance to be $$B_t$$
+        <img src="./Images/FD.PNG" alt="Italian Trulli">
+        <p></p>
+        <b>Backward denoising process HL: </b>
+        <p></p>
+        <b>Backward math: </b>
+        <p></p>
+        <b>Conditioning HL: </b>
+        <p></p>
+        <b>Conditioning math: </b>
+        <p></p>
+        <b>Classifier-free guidanceHL: </b>
+        <p></p>
+        <b>Classifier free guidance math </b>
+        <p></p>
+        
+
+    </body>
+
+</html>
