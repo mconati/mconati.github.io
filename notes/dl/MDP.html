@@ -5,6 +5,8 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../assets/css/web.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
         <title>Template</title>
     </head>
     <body>
@@ -46,6 +48,46 @@
         MDPs are a case of MRPs where transitions are determined by decisions instead of chance. Here, actions are taken in accordance with a policy:
         $$\pi (a|s) = P[A_t = a | S_t = s]$$
         In non  math terms, a policy assigns probabilities to state-transition actions based on the current state S. Deciding on a policy reduces an MDP to an MRP!
+        In an MDP, we evaluate a policy with a state-value and action-value function. Both of these have a Bellman Expectation decomposition. The state value function gives the expected return starting at a state s given a policy pi. In other words, this is the amount of reward you expect to recieve given your policy pi at a state
+        $$ v_{\pi}(s) = E_{\pi}[G_t | S_t = s]$$
+        The Bellman expectation equation tells us that the reward is equal to the immediate reward R(T+1) plus the discounted value of the next state using our policy pi at that state
+        $$ v_{\pi}(s) = E_{\pi}[R_{t+1} + \gamma v_{\pi}(S_{t+1}) | S_t = s]$$
+        
+        The action-value function gives you expected return given a state s, action a, and policy pi. 
+        $$q_{\pi}(s,a) = E_{\pi}[G_t | S_t =s, A_t = a]$$
+        The Bellman expectation equation tells us that the reward is equal to the immediate reward plus the discounted action-value of the next state
+        $$q_{\pi}(s,a) = E_{\pi}[R_{t+1} + \gamma v_{\pi}(S_{t+1}, A_{t+1}) | S_t =s, A_t = a]$$
+
+        We can unravel the expectation by incorporating our policy probabilities explicitly:
+        <p></p>
+       
+        <img src="./Images/setup.PNG" alt="Italian Trulli">
+        <p></p>
+        As a reminder, the Bellan equation gives us a means to solve for values in a low state system  (second image on this page)
+
+        <p></p>
+
+        The tools so far have given us the ability to determine the value given a policy pi. However, the real goal is to find the optimal policy pi. The optimal policy has an optimal value function v* where the value of each state is greater than or equal to the value of that state in any other policy. This extracts maximum reward from the system. A similar optimal value function exists for action-values q*. Solving for q* solves the MDP. There is always an optimal policy that is greater than or equal to any other policy.
+
+        <p></p>
+        q* and v* can be determined from each other. v* from q* uses the Bellman optimality equation. Here, we look at the optimal action only (no longer an expectation):
+        $$v_{*}(s) = max(q_{*}(s,a))$$
+        q* is dependent on v*, but it does not use optimality since the outcomes of actions is environmentally determined. So, we get immediate reward and the average over the value of possible resultant states. 
+        $$q_{*}(s,a) = R_s^a + \gamma * \sum_{s' in S} P_{SS'}^a v_{*}(s')$$
+        We can then relate v* to itself by plugging q* in to v*! (or get a similar recursive relation for q*). There is no closed form solution here because of the max. So, we use iterative methods:
+        <p></p>
+        <li>
+            <a href="./DP.html">Value Iteration/Policy Iteration</a> 
+        </li>
+        <li>
+            <a href="./Q.html">Q learning</a> 
+        </li>
+
+
+
+
+
+
 
         <p></p>
     </body>
