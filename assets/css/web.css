@@ -37,13 +37,13 @@
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 		text-decoration: none;
-		color: #cbdd98;
+		color: #ba9efd;
 	}
 	strong, b {
-		color: #ffffff;
+		color: #f8ffb9;
 	}
 
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #fffd6d;
 	}

@@ -44,10 +44,9 @@
         </li>
         <ul>
         <li>
-            Controller Design: The controller is the most complex element of the system, taking in a reference from the planning stage. There are many flavors of controller. The most basic controller type is open loop. This flavor of controller takes in a reference and outputs control signals directly to the system. It requires very good system modeling and low disturbances to be effective (and is really not useful). Most useful types use feedback. Feedback is a bit of a double edges sword. We are forced to use it because of how sensitive open-loop controllers are, however, it fundamentally changes our system. 
+            <b>Controller Design</b>: The controller is the most complex element of the system, taking in a reference from the planning stage. There are many flavors of controller. The most basic controller type is open loop. This flavor of controller takes in a reference and outputs control signals directly to the system. It requires very good system modeling and low disturbances to be effective (and is really not useful). Most useful types use feedback. Feedback is a bit of a double edges sword. We are forced to use it because of how sensitive open-loop controllers are, however, it fundamentally changes our system. 
             Feedforward(open-loop) only changes the input to the system; it is effectively creating an artificial system operator that can only modify the accessible inputs. Feedback(closed-loop) control changes the future state as a function of the current state. This is a change in dynamics! Poor design can make a system less stable(or unstable), but this does also give us the ability to make unstable systems stable (E.G, a bounded input to a non-inverted pendulum with feedforward will always let the pendulum return to straight down, but a pendulum with a feedback controller could end up with permanent oscillations). Here are some types of feedback controllers:
             <ul>
-                <li></li>
                 <li>Linear Controllers: PID and Full-state feedback assume linear system control (or a linearized system)</li>
                 <li>Optimized(linear): LQR optimizes based on the cost of control effort and performance</li>
                 <li>Nonlinear Controllers: On-Off, Sliding mode, and gain scheduling controllers assume a non-linear plant</li>
@@ -59,13 +58,13 @@
         </li>
         </ul>
         <li>
-            State Estimation: The controller will change the underlying state of the system. In order for this feedback to be known, we have to use sensors(which are noisy). State estimation works to reduce measurement noise and estimate underlying state. We can use filtering techniques like observers, Kalman filters, Particle filters, or simpler approaches like moving averages, FIR, and IIR filters
+            <b>State Estimation</b>: The controller will change the underlying state of the system. In order for this feedback to be known, we have to use sensors(which are noisy). State estimation works to reduce measurement noise and estimate underlying state. We can use filtering techniques like observers, Kalman filters, Particle filters, or simpler approaches like moving averages, FIR, and IIR filters
         </li>
         <li>
-            System Analysis: We need to make sure the designed system works as expected via simulation, analysis, and test. System analysis is based on fundamental concepts like Continuous and discrete time, LTI/LSI, Impulse responses, Convolution, Fourier/Laplace/Z transforms. Common useful checks are stability analysis(Root locus/Nyquist), frequency analysis(Bode), Gain and phase margins. We can also simulate the system in Simulink/Matlab
+            <b>System Analysis</b>: We need to make sure the designed system works as expected via simulation, analysis, and test. System analysis is based on fundamental concepts like Continuous and discrete time, LTI/LSI, Impulse responses, Convolution, Fourier/Laplace/Z transforms. Common useful checks are stability analysis(Root locus/Nyquist), frequency analysis(Bode), Gain and phase margins. We can also simulate the system in Simulink/Matlab
         </li>
         <li>
-            Signal Processing/Feature Extraction: Signal processing techniques are useful for extracting features/information from complex signals like audio and video. Anything in the Deep Learning section is relevant, along with Fourier, STFT, IIR, FIR, NMF, DTW, LMS. Specific to radios are concepts like Coding/Decoding, Modulation/Demodulation, Channel estimation, Fading, Multi-antenna, Multiple access. 
+            <b>Signal Processing/Feature Extraction</b>: Signal processing techniques are useful for extracting features/information from complex signals like audio and video. Anything in the Deep Learning section is relevant, along with Fourier, STFT, IIR, FIR, NMF, DTW, LMS. Specific to radios are concepts like Coding/Decoding, Modulation/Demodulation, Channel estimation, Fading, Multi-antenna, Multiple access. 
         </li>
         <p></p>
         Putting this all together we get the following high level view:
