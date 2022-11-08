@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Marco Conati website</title>
+		<title>Marco Conati</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -56,22 +56,24 @@
 							<article id="work">
 								<h2 class="major">Projects</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC and postgrad experiments. My most recent, large-scale code project is <a href = "#Chopin">Style Transfer with Transformers</a>, so I recommend checking out that project. Each item links to a small project summary page:
+								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC and postgrad experiments. My most recent, large-scale code project is <a href = "#Chopin">Style Transfer with Transformers</a>, so I recommend checking out that project. Each item links to a small project summary page, and <b>bolded</b> projects are ones I'm most proud of:
+
 									<ul> <h4>Deep Learning/NLP</h4>
-									<li><a href = "#Chopin">Style Transfer with Transformers (HMC MIR research)</a></li>
-									<li><a href = "#LRP">Low-Resource Pretraining with Jukebox (HMC MIR research)</a></li>
+									<li><a href = "#Chopin"><b>Style Transfer with Transformers (HMC MIR research)</b></a></li>
+									<li><a href = "#LRP"><b>Low-Resource Pretraining with Jukebox (HMC MIR research)</b></a></li>
 									<li><a href = "#CALM">Codified Audio Language Modeling for Instrument Detection</a></li>
 									<li><a href = "#TsaiDL">Numpy Neural Net</a></li>
+									<li><a href = "#Torch">Making a Pytorch Rundown</a></li>
 								
 									<br></br>
 									<h4>Reinforcement Learning</h4>
-								
-									<li><a href = "#Alphazero">Recreating Alphazero</a></li>
 									<li><a href = "#DS">RL with David Silver</a></li>
+									<li><a href = "#Alphazero"><b>Recreating Alphazero</b></a></li>
+									
 								
 									<br></br>
 									<h4>Classical Robotics/Controls</h4>
-									<li><a href = "#BlimpKF">Particle Filter Blimp tracking</a></li>
+									<li><a href = "#BlimpKF"><b>Particle Filter Blimp tracking</b></a></li>
 									<li><a href = "#Pendulum">State Space Inverted Pendulum Simulation in Simulink</a></li>
 									<li><a href = "#e80">PID-based Aquatic Robot</a></li>
 									<li><a href = "#Drone">Kalman Filter Drone tracking</a></li>
@@ -80,7 +82,7 @@
 								
 									<br></br>
 									<h4>Signal Processing</h4>
-									<li><a href = "#AnalogDigitalFilter">Building Analog and Digital Filters</a></li>
+									<li><a href = "#AnalogDigitalFilter"><b>Building Analog and Digital Filters</b></a></li>
 									<li><a href = "#MusicTrack">Tracking a Musical Performance in Realtime</a></li>
 									<li><a href = "#e190">Analyzing Audio with STFT</a></li>
 									
@@ -94,13 +96,14 @@
 									<li><a href = "#searches">Implementing and speed testing some array search algorithms</a></li>
 									<li><a href = "#rats">Solving a riddle with Dynamic Programming</a></li>
 								</ul>
+								<p><i>Also, about half of the projects pages have tangentially-related AI generated art in them, which I find pretty fun</i>
 							</article>
 
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">Notes</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>As an ongoing project, I have been transferring my favorite notes from (and since) Mudd into digital format. I have built the basic framework for this site, so you can see what I have learned about, but it is currently only about 30% populated. Also, brace your eyes, the html quality is dire. <a href="./website.html">Here it is!</a></p>
+								<p>As an ongoing project, I have been transferring and reviewing my favorite notes from (and since) Mudd into digital format. I have built the basic framework for this site, so you can see what I have learned about, but it is currently only about 25% populated. I'm currently populating about 3 pages per week, so it should be done in mid-late 2023; right now, controls and reinforcement learning are the most populated. Also, brace your eyes, the html quality is dire. <a href="./website.html">Here it is!</a></p>
 							</article>
 						
 						<!-- Projects -->
@@ -150,24 +153,29 @@
 								<span class="image main"><img src="images/numpy.png" alt="" /></span>
 								<p>Full disclosure, this "project" is the result of homework in prof Tsai's deep learning for engineers course. For the first 4 weeks of the course, we slowly built the components of a neural net in numpy. This assignment involved putting those pieces(weight initialization, activation functions, loss function, forward/back prop, and gradient descent) together into one notebook. The neural net was then used as an autoencoder for representing 8 digits in a 3d space. My code is <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems/hw4'>here </a>. Also, the larger <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems'>dlStems </a> folder has other neat assignments from prof Tsai's course if you found this interesting!</p>
 							</article>
+							<article id="Torch">
+								<h2 class="major">Learning Pytorch</h2>
+								<span class="image main"><img src="images/torch.png" alt="" /></span>
+								<p>During the pandemic, I wanted to learn more about how neural nets are built in practice. In researching this, I found the Pytorch libraries. While studying Pytorch, I made <a href = './torch.pdf'>this(pdf) </a> document. While my document generally follows the official Pytorch tutorials, it is more in line with my thought process while learning, with slightly less organization and frequent detours to fill in gaps (like why are GPUs good for Deep Learning).</p>
+							</article>
 							<article id="Alphazero">
-								<h2 class="major">Recreating Alphazero</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p></p>
+								<h2 class="major">Recreating AlphaZero</h2>
+								<span class="image main"><img src="images/chessbot.png" alt="" /></span>
+								<p>As a learning experience during the pandemic, I undertook a project with Natalia Orbach-Mandel and Ari Conati(my brother), to implement the <a href ='https://arxiv.org/abs/1712.01815'> AlphaZero</a> paper. This paper had revolutionized AI chess and Go bots in 2017, convincingly beating the world champion in each game. Our main goals were to learn about Pytorch, gain practical Reinforcement Learning experience, and have fun. Here is the <a href = 'https://github.com/AConati/amnom-chess'>code!</a> I am proud of this work because of the context; it represents us using the lockdown to better ourselves.</p>
 							</article>
 							<article id="DS">
 								<h2 class="major">Self-studying RL</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p></p>
+								<span class="image main"><img src="images/RL.png" alt="" /></span>
+								<p>In preparing to recreate AlphaZero, I completed David Silver's(one of the AlphaZero researchers) RL course on YouTube. While completing this course, I took pretty extensive notes, which I am transferring to digital form <a href = './notes/dl/RL.html'>here.</a></p>
 							</article>
 							<article id="BlimpKF">
 								<h2 class="major">Particle Filter Blimp tracking</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/blimp.jpg" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="Pendulum">
 								<h2 class="major">Inverted Pendulum Simulation</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/IP.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="e80">
@@ -178,57 +186,57 @@
 							</article>
 							<article id="Drone">
 								<h2 class="major">Kalman Filter Drone tracking</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/drone.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="Syntiant">
 								<h2 class="major">Door Security-Syntiant</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/Syntiant.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="Millennium">
 								<h2 class="major">Spatial Navigation-Millennium</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/space.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="AnalogDigitalFilter">
 								<h2 class="major">Analog and Digital Filters</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/sallen.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="MusicTrack">
 								<h2 class="major">Musical Performance Tracking</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/perform.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="e190">
 								<h2 class="major">Analyzing Audio with STFT</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/STFT.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="hashTree">
 								<h2 class="major">Spellchecker</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/binary.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="radioA">
 								<h2 class="major">A* search for Radio Networks</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/radio.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="chunkystring">
 								<h2 class="major">Chunkystring</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/C++.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="searches">
 								<h2 class="major">Testing array searches</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/search.png" alt="" /></span>
 								<p></p>
 							</article>
 							<article id="rats">
 								<h2 class="major">Solving a riddle</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/rats.png" alt="" /></span>
 								<p></p>
 							</article>
 
