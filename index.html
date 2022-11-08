@@ -42,18 +42,24 @@
 							<article id="intro">
 								<h2 class="major">About me</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Hello! I'm Marco, a Harvey Mudd graduate currently working as a Systems Engineer at Trellisware. For a quick look into my background, check out my <a href="./resume.pdf">resume.</a> Or, for a much more thorough look at my technical work over the years, check out my <a href="#work">projects</a>.</p>
-								<p></p>
+								<p>Hello! I'm Marco, a Harvey Mudd graduate currently working as a Systems Engineer at Trellisware. I'm interested in AI and controls, hoping to contribute to the development of human-centered AI or intelligent robots someday. For a quick look into my background, check out my <a href="./resume.pdf">resume(pdf).</a> Or, for a much more thorough look at my technical work over the years, check out my <a href="#work">projects</a>.</p>
+								<p>On a less academic note, I'm a big fan of swimming, cooking, cats and riddles. Feel free to send me a <a href="#contact">message!</a></p>
+								<p><b>Ready for a swim at NCAAs 2022:</b></p>
+								<span class="image main"><img src="images/03.jpg" alt="" /></span>
+								<p><b>Cooking with close ones:</b></p>
+								<span class="image main"><img src="images/02.jpg" alt="" /></span>
+								<p><b>Family cats! Max on the left and Leo on the right:</b></p>
+								<span class="image main"><img src="images/01.jpg" alt="" /></span>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Projects</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC and postgrad experiments. Each item links to a small project summary page:
+								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC and postgrad experiments. My most recent, large-scale code project is <a href = "#Chopin">Style Transfer with Transformers</a>, so I recommend checking out that project. Each item links to a small project summary page:
 									<ul> <h4>Deep Learning/NLP</h4>
 									<li><a href = "#Chopin">Style Transfer with Transformers (HMC MIR research)</a></li>
-									<li><a href = "#LRP">Low-Resource Pretraining with Jukebox(HMC MIR research)</a></li>
+									<li><a href = "#LRP">Low-Resource Pretraining with Jukebox (HMC MIR research)</a></li>
 									<li><a href = "#CALM">Codified Audio Language Modeling for Instrument Detection</a></li>
 									<li><a href = "#TsaiDL">Numpy Neural Net</a></li>
 								
@@ -100,23 +106,49 @@
 						<!-- Projects -->
 						<article id="Chopin">
 							<h2 class="major">Chopin Style Transfer</h2>
-							<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-							<p></p>
+							<span class="image main"><img src="images/chopin.png" alt="" /></span>
+							<p>My code for this project is <a href = 'https://github.com/HMC-MIR/ChopinStyleTransfer/tree/main/MDEModels'>here.</a> This was my second project working with Prof Tsai in the MIR lab. 
+								<p> This project aimed to generate Chopin-esque piano scores. In my literature review, I found that state-of-the-art score
+								generation models struggled to emulate the long-term structure and style of human-composed
+								pieces, resulting in forgotten motifs, over-repetition, jarring jumps, sparse sections, and
+								distasteful chords. To maintain structure, we constrained our generative process, building our
+								score from a database of left- and right-hand Chopin measures. At a high level, our approach
+								started with the right-hand part from a random Chopin piece, built a left-hand score from the
+								database of left-hand measures, and then repeated the process to replace the original right-hand.
+								As we were using Chopin's measures directly, musical style would be maintained, and the
+								structure of the original right-hand should persist through generation. I compiled the left/right
+								hand measure database, created a BERT model with a custom encoder for note events, and
+								trained two such BERT models to predict right/left hand compatibility and next measure
+								prediction, respectively. My custom transformer embedding treated each measure as sequence of
+								note events, each defined by the hand configuration along with the octave and pitch of the lowest
+								note. This project was put on hold as I graduated in the Spring, but it is being resumed this Fall
+								by a new group of students. Future work will use the two transformers in concert to generate new
+								scores based on continuity between measures (next measure prediction) and compatibility
+								between hands.</p></p>
 						</article>
 							<article id="LRP">
 								<h2 class="major">Low-Resource Pretraining</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p></p>
+								<span class="image main"><img src="images/jukebox.png" alt="" /></span>
+								<p>My code for this project is <a href = 'https://github.com/HMC-MIR/LowSourcePretraining/tree/main/Jukebox/jukebox'>here.</a>
+								This was my first main project in the HMC MIR lab. It involved building upon the work of Stanford's Liang et al. in their Codified Audio
+								Language Modeling paper. I also build upon my previous experience with Liang et al.'s code from my <a href = "#CALM">instrument detection project</a>. They had demonstrated that audio features extracted from the middle
+								layer of OpenAI's music generation model, Jukebox, contained rich information for downstream
+								MIR tasks. We sought to improve feature extraction by finetuning the output layers of a Jukebox
+								model for benchmark MIR datasets. To this end, I created a modified Jukebox-style model with a
+								flexible number of unfrozen layers and MIR-specific training objective in Pytorch. I successfully
+								implemented the modified model, but the additional finetuning had no significant effect on our
+								targeted benchmarks.</p>
 							</article>
 							<article id="CALM">
 								<h2 class="major">Instrument Detection</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p></p>
+								<span class="image main"><img src="images/e208.png" alt="" /></span>
+								<p>Building upon the work of Stanford's Liang et. al, I worked with Alec Vercruysse to demonstrate that codified audio language modeling can learn useful representations for instrument identification. To this end, we used representations from layers within Jukebox: a generative model for music. Jukebox representations are used as input features to train shallow probes; each probe is trained to identify the presence of a specific instrument. As input data, the OpenMIC-2018 dataset was used. This dataset contains 10 second excerpts of audio that are partially labeled for the presence or absence of 20 instrument classes. Our results indicated that our probes were unable to match state-of-the-art performance. Further investigation also revealed that while some of the best performing models were achieved with few to no hidden layers, the probes still learn a complicated representation of Jukebox output features.</p>
+								<p>Our full report is <a href = './e208.pdf'>here(pdf) </a> and code is<a href = 'https://github.com/mconati/E208'> here </a></p>
 							</article>
 							<article id="TsaiDL">
 								<h2 class="major">Numpy Neural Net</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p></p>
+								<span class="image main"><img src="images/numpy.png" alt="" /></span>
+								<p>Full disclosure, this "project" is the result of homework in prof Tsai's deep learning for engineers course. For the first 4 weeks of the course, we slowly built the components of a neural net in numpy. This assignment involved putting those pieces(weight initialization, activation functions, loss function, forward/back prop, and gradient descent) together into one notebook. The neural net was then used as an autoencoder for representing 8 digits in a 3d space. My code is <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems/hw4'>here </a>. Also, the larger <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems'>dlStems </a> folder has other neat assignments from prof Tsai's course if you found this interesting!</p>
 							</article>
 							<article id="Alphazero">
 								<h2 class="major">Recreating Alphazero</h2>
@@ -140,8 +172,9 @@
 							</article>
 							<article id="e80">
 								<h2 class="major">PID-based Aquatic Robot</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p></p>
+								<span class="image main"><img src="images/e80.png" alt="" /></span>
+								<p>Sorry for the grainy picture, this project is from 2018 and at the time of making this site I have lost a lot of the materials. For this project, I worked in a team to build an Aquatic robot with homemade sensors. The robot was meant to navigate around Dana Point and collect water clarity, turbidity, and wind speed. A report detailing the homemade sensors is <a href="./report.pdf">here(pdf).</a></p> I was primarily responsible for the navigation. Unfortunately, I lost the code at some point, but our robot was generally able to navigate well. The PID was purely GPS based(and our GPS had 3 m uncertainty), so the robot movement was pretty crude. Here is an example of it heading to a waypoint and back:</p>
+								<img src="./Images/e80Path.png" alt="Italian Trulli">
 							</article>
 							<article id="Drone">
 								<h2 class="major">Kalman Filter Drone tracking</h2>
