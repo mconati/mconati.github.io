@@ -85,7 +85,7 @@
 									<h4>Signal Processing</h4>
 									<li><a href = "#AnalogDigitalFilter"><b>Building Analog and Digital Filters</b></a></li>
 									<li><a href = "#MusicTrack">Tracking a Musical Performance in Realtime</a></li>
-									<li><a href = "#e190">Analyzing Audio with STFT</a></li>
+									<li><a href = "#e190">Implementing the Shazam paper for Music Recognition</a></li>
 									
 									
 						
@@ -197,27 +197,50 @@
 							<article id="Syntiant">
 								<h2 class="major">Door Security-Syntiant</h2>
 								<span class="image main"><img src="images/Syntiant.png" alt="" /></span>
-								<p></p>
+								<p>This was my senior capstone project, where I served as Team
+									Lead for a group of five students in collaboration with Syntiant Corporation. We developed an
+									entrance security system composed of a battery-powered tag that can be deployed on doors in
+									secured areas to track their position in addition to software to identify anomalous activity.
+									During this capstone, I wrote the event and state estimation code, while the rest of my team
+									collected training data and designed a custom PCB for deployment. My code was comprised of
+									two main components: a Kalman Filter for estimating the angle of a swinging door and a
+									Convolutional Neural Net (CNN) for identifying anomalous events. The Kalman Filter was built
+									in C++ and processed 9-axis Inertial Measurement Unit (IMU) data in real time to localize the
+									sensor. I used the IMU's gyroscope to predict changes in angle and magnetometer for error
+									corrections. My event detection system passed frames of 1-D sensor data to Syntiant's NDP120
+									deep learning processor, where an onboard CNN identified key door events like knocking and
+									opening. We were able to successfully deliver a prototype to Syntiant for further development
+									into a marketable product. Unfortunately, as this project was completed for a company, the code is closed due to an NDA. But, <a href = './Syntiant.pdf'>this(pdf)</a> poster about our project was signed off on for public viewing:</p>
+								
 							</article>
 							<article id="Millennium">
 								<h2 class="major">Spatial Navigation-Millennium</h2>
 								<span class="image main"><img src="images/space.png" alt="" /></span>
-								<p></p>
+								<p>This was my junior clinic project, where I worked in conjunction with four other Harvey Mudd students and liaisons from Millennium Space Systems.
+									 We were tasked with augmenting a star tracker system to localize a Low Earth Orbit satellite in the event of a GPS lockout. We developed two means to do this. The first 
+									 used the Earth's horizon as a reference, which could then localize the satellite in conjunction with the star tracker's attitude quaternion. Our second 
+									 method determined position by observing the refraction of stars behind the earth's horizon. As this project was completed in collaboration with Millennium, the code is closed due to an NDA.
+								</p>
 							</article>
 							<article id="AnalogDigitalFilter">
 								<h2 class="major">Analog and Digital Filters</h2>
 								<span class="image main"><img src="images/sallen.png" alt="" /></span>
-								<p></p>
+								<p>As a final project in my junior year, I worked with a lab partner to design and implement two
+									low-pass filters for isolating a 10 Hz sine wave from a 10 Hz pulse train. This requires a low-pass filter to remove all of the high frequency noise. One of the filters was
+									an analog 4 th order Butterworth filter, implemented directly on a breadboard using the Sallen-Key
+									circuit. The other filter was implemented digitally as a 10 th order comb filter. Both filters
+									successfully isolated the 10 Hz sine wave. Here is our <a href='./DigitalAnalog.pdf'> report(pdf)</a>. It has our Arduino and Matlab code at the end.</p>
 							</article>
 							<article id="MusicTrack">
 								<h2 class="major">Musical Performance Tracking</h2>
 								<span class="image main"><img src="images/perform.png" alt="" /></span>
-								<p></p>
+								<p>In conjunction with Brandon Apodaca, I created the backbone of a music tracking application. This system could ideally be adapted to create an application for following a performance and advancing the sheet music accordingly.</p>
+								<p>Our system utilized Dynamic Time Warping to align query audio to the reference music score in realtime. Our system was reliably able to converge for monophonic audio performances. Here is our <a href = './MusicTrack.pdf'>paper(pdf)</a> and our <a href = 'https://github.com/mconati/MusicStemsFinalProject'>code!</a></p>
 							</article>
 							<article id="e190">
-								<h2 class="major">Analyzing Audio with STFT</h2>
-								<span class="image main"><img src="images/STFT.png" alt="" /></span>
-								<p></p>
+								<h2 class="major">Shazam Paper</h2>
+								<span class="image main"><img src="images/MusicTrack.png" alt="" /></span>
+								<p>This project</p>
 							</article>
 							<article id="hashTree">
 								<h2 class="major">Spellchecker</h2>
