@@ -74,10 +74,11 @@
 									<br></br>
 									<h4>Classical Robotics/Controls</h4>
 									<li><a href = "#BlimpKF"><b>Extended Kalman Filter Blimp tracking</b></a></li>
+									<li><a href = "#Syntiant"><b>Door Security System - Syntiant Clinic</b></a></li>
 									<li><a href = "#Drone"> Particle Filter Localization of a simple robot</a></li>
 									<li><a href = "#Pendulum">State Space Inverted Pendulum Simulation in Simulink</a></li>
 									<li><a href = "#e80">PID-based Aquatic Robot</a></li>
-									<li><a href = "#Syntiant">Door Security System - Syntiant Clinic</a></li>
+
 									<li><a href = "#Millennium">Spatial Navigation - Millennium Clinic</a></li>
 								
 									<br></br>
@@ -171,7 +172,9 @@
 							<article id="BlimpKF">
 								<h2 class="major">EKF Blimp tracking</h2>
 								<span class="image main"><img src="images/blimp.png" alt="" /></span>
-								<p>This project involved tracking a blimp using recorded(but very noisy) compass, position, and thrust input data. The underlying, smooth path was determined using an EKF. The EKF uses vehicle dynamics to predict the position, and updates are made with the measurement value(although the measurement noise is considered in the correction step). Here is the <a href = 'https://github.com/mconati/E208andE205/blob/main/MConati_Blimp_EKF.ipynb'>code</a>, with thorough comments!</p>
+								<p>This project involved tracking a blimp using recorded(but very noisy) compass, GPS position, and thrust input data. The underlying, smooth path was determined using an EKF:</p>
+									<span class="image main"><img src="images/blimpPath.png" alt="" /></span>
+								<p>The EKF uses vehicle dynamics to predict the position, and updates are made with the measurement value(although the measurement noise is considered in the correction step). Here is the <a href = 'https://github.com/mconati/E208andE205/blob/main/MConati_Blimp_EKF.ipynb'>code</a>, with thorough comments!</p>
 							</article>
 							<article id="Pendulum">
 								<h2 class="major">Inverted Pendulum Simulation</h2>
@@ -183,12 +186,13 @@
 								<span class="image main"><img src="images/e80.png" alt="" /></span>
 								<p>Sorry for the grainy picture, this project is from 2018 and at the time of making this site I have lost a lot of the materials. For this project, I worked in a team to build an Aquatic robot with homemade sensors. The robot was meant to navigate around Dana Point and collect water clarity, turbidity, and wind speed. A report detailing the homemade sensors is <a href="./report.pdf">here(pdf).</a></p> I was primarily responsible for the navigation. Unfortunately, I lost the code at some point, but our robot was generally able to navigate well. The PID was purely GPS based(and our GPS had 3 m uncertainty), so the robot movement was pretty crude. Here is an example of it heading to a waypoint and back:</p>
 								<img src="./Images/e80Path.png" alt="Italian Trulli">
+								<p><i>To make up for the low resolution image above, look at this cool Dalle2 drone!:</i></p>
+								<img src="./Images/drone.png" alt="Italian Trulli">
 							</article>
 							<article id="Drone">
 								<h2 class="major">Particle filter localization</h2>
-								<span class="image main"><img src="images/drone.png" alt="" /></span>
-								<p><i>The robot in this project is land based(more like a Roomba), but this Dalle2 image was too cool for me to not include</i></p>
-								<p>This project was completed in a group as a Lab for the State Estimation course at Harvey Mudd. It involved localizing a simple robot using its onboard LIDAR. This course was unique in that there were only four labs during the semester, so each of them was quite intensive(and that's why I justified including this as a project). Here is our <a href='./Lab4.pdf'>report(pdf)</a> and our <a href = 'https://github.com/mconati/E208andE205/blob/main/Lab4.ipynb'>code!</a></a></p>
+								<span class="image main"><img src="images/PF.png" alt="" /></span>
+								<p> This project involved localizing a simple robot using its onboard LIDAR and IMU. The prediction step was conducted using the robot's IMU data and system dynamics, while the LIDAR was used for localization corrections. Our predicted path closely mirrored the actual, "desired" path, and outperformed pure GPS localization. I worked on this project in a group(with Evan Hassman and Bowen Jiang) for the State Estimation course(E205) at Harvey Mudd. E205 was unique in that there were only four labs during the semester, so each of them was quite intensive(and that's why I justified including this as a project). Here is our <a href='./Lab4.pdf'>report(pdf)</a> and our <a href = 'https://github.com/mconati/E208andE205/blob/main/Lab4.ipynb'>code!</a></a></p>
 							</article>
 							<article id="Syntiant">
 								<h2 class="major">Door Security-Syntiant</h2>
