@@ -92,7 +92,7 @@
 									<br></br>
 									<h4>Programming</h4>
 									<li><a href = "#hashTree">Spellchecker with Binary Trees and Hashtables</a></li>
-									<li><a href = "#radioA">Using A* search to determine a radio network size</a></li>
+									<li><a href = "#A">Using A* search to design a city</a></li>
 									<li><a href = "#chunkystring">Building a new datastructure in C++</a></li>
 									<li><a href = "#searches">Implementing and speed testing some array search algorithms</a></li>
 									<li><a href = "#rats">Solving a riddle with Dynamic Programming</a></li>
@@ -247,10 +247,24 @@
 								<span class="image main"><img src="images/binary.png" alt="" /></span>
 								<p></p>
 							</article>
-							<article id="radioA">
-								<h2 class="major">A* search for Radio Networks</h2>
+							<article id="A">
+								<h2 class="major">A* search City Design</h2>
 								<span class="image main"><img src="images/radio.png" alt="" /></span>
-								<p></p>
+								<p>I completed this project as a fun way to familiarize myself with A* search (and graph traversals in general). The motivation is that a city planner wants to add trails, gravel roads, and paved roads between n settlements, such that the longest travel time in the network doesn't exceed d days. In this scenario, no trail&lttrail&ltgravel&ltpaved for travel speed, but cost also increases as connection quality increases. So, this program wants to avoid making the more expensive connections if necessary.
+								This program is a tool that takes in n, d as parameters and plots a possible network that meets the requirements. Since this was just a learning experience, the program is not very smart. It works with the following pseudocode:</p>
+								
+								Given settlement locations [x,y], an equation f(distance, trail type) that gives travel time in days for a certain distance and trail type, and a maximum travel time d days, Loop:
+								<ul>
+								<li>Use A* to find the longest path in the current network in days</li>
+								<ul>
+								<li>If it is longer than d days, upgrade the longest path (nothing&lttrail&ltgravel&ltpaved)</li>
+								<li>Else if longest path is less than d days, return the network!</li>
+								</ul>
+								<a href = 'https://github.com/mconati/MiscCode/blob/main/network.py'>The code</a> isn't the smartest since it will start making trails that might not end up getting used once better roads are built. But, it does do a good job avoiding roads until they are necessary, which could be valuable assuming roads are more costly. An easy improvement would be to make one final pass and remove unnecessary connections at the end. Here is an example of a generated network where n=15 settlements and d=15 days:
+								<span class="image main"><img src="images/Example.PNG" alt="" /></span>
+								It does exhibit some good behaviors like saving roads for long connections. But, it is certainly not ideal.
+							</ul>
+								
 							</article>
 							<article id="chunkystring">
 								<h2 class="major">Chunkystring</h2>
