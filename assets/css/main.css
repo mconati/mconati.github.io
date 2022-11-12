@@ -731,10 +731,10 @@ input, select, textarea {
 		list-style-type: none;
 		counter-reset: section;
 		padding-left: 32px;
-		color:rgb(191, 174, 255);
+		color:rgb(153, 214, 255);
 	}
 	ol li {
-		color: rgb(191, 174, 255);
+		color: rgb(153, 214, 255);
 	}
 	ol li:before {
 		counter-increment: section; /* Increments only this instance
@@ -742,8 +742,9 @@ input, select, textarea {
   		content: counters(section, ".") " ";
 		margin-right: 20px;
 		font-size: 80%;
-		background-color: rgb(0, 0, 0);
 		font-weight: bold;
+		background-color: #2e4764;
+		color:#fff3b0;
 		padding: 3px 8px;
 		border-radius: 11px;
 	}
