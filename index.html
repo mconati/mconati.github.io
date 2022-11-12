@@ -58,30 +58,33 @@
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC and postgrad experiments. My most recent, large-scale code project is <a href = "#Chopin">Style Transfer with Transformers</a>, so I recommend checking out that project. Each item links to a small project summary page, and <b>bolded</b> projects are ones I'm most proud of:
 
-									<ul> <h4>Deep Learning/NLP</h4>
+									<h4>Deep Learning/NLP</h4>
 									<li><a href = "#Chopin"><b>Style Transfer with Transformers (HMC MIR research)</b></a></li>
 									<li><a href = "#LRP"><b>Low-Resource Pretraining with Jukebox (HMC MIR research)</b></a></li>
 									<li><a href = "#CALM">Codified Audio Language Modeling for Instrument Detection</a></li>
+									<li><a href = "#CNN">CNNs and Autoencoders</a></li>
+									<li><a href = "#RNN">RNN for Language Classification</a></li>
+									<li><a href = "#LSTM">LSTM Seq to Seq model for Translation</a></li>
 									<li><a href = "#TsaiDL">Numpy Neural Net</a></li>
 									<li><a href = "#Torch">Making a Pytorch Rundown</a></li>
 								
-									<br></br>
+									<p></p>
 									<h4>Reinforcement Learning</h4>
 									<li><a href = "#DS">RL with David Silver</a></li>
 									<li><a href = "#Alphazero"><b>Recreating Alphazero</b></a></li>
 									
 								
-									<br></br>
+									<p></p>
 									<h4>Classical Robotics/Controls</h4>
 									<li><a href = "#BlimpKF"><b>Extended Kalman Filter Blimp tracking</b></a></li>
 									<li><a href = "#Syntiant"><b>Door Security System - Syntiant Clinic</b></a></li>
-									<li><a href = "#Drone"> Particle Filter Localization of a simple robot</a></li>
+									<li><a href = "#Drone"> <b>Particle Filter Localization of a simple robot</b></a></li>
 									<li><a href = "#Pendulum">State Space Inverted Pendulum Simulation in Simulink</a></li>
 									<li><a href = "#e80">PID-based Aquatic Robot</a></li>
 
 									<li><a href = "#Millennium">Spatial Navigation - Millennium Clinic</a></li>
 								
-									<br></br>
+									<p></p>
 									<h4>Signal Processing</h4>
 									<li><a href = "#AnalogDigitalFilter"><b>Building Analog and Digital Filters</b></a></li>
 									<li><a href = "#MusicTrack">Tracking a Musical Performance in Realtime</a></li>
@@ -89,15 +92,16 @@
 									
 									
 						
-									<br></br>
+									<p></p>
 									<h4>Programming</h4>
 									<li><a href = "#hashTree">Spellchecker with Binary Trees and Hashtables</a></li>
 									<li><a href = "#A">Using A* search to design a city</a></li>
 									<li><a href = "#chunkystring">Building a new datastructure in C++</a></li>
 									<li><a href = "#searches">Implementing and speed testing some array search algorithms</a></li>
 									<li><a href = "#rats">Solving a riddle with Dynamic Programming</a></li>
-								</ul>
-								<p><i>Also, about half of the projects pages have tangentially-related AI generated art in them, which I find pretty fun</i>
+								
+								<br></br>
+								<p><i>Also, about half of the projects pages have tangentially-related AI generated art in them, which I find pretty fun</i></p>
 							</article>
 
 						<!-- About -->
@@ -147,12 +151,14 @@
 								<h2 class="major">Instrument Detection</h2>
 								<span class="image main"><img src="images/octopus.png" alt="" /></span>
 								<p>Building upon the work of Stanford's Liang et. al, I worked with Alec Vercruysse to demonstrate that codified audio language modeling can learn useful representations for instrument identification. To this end, we used representations from layers within Jukebox: a generative model for music. Jukebox representations are used as input features to train shallow probes; each probe is trained to identify the presence of a specific instrument. As input data, the OpenMIC-2018 dataset was used. This dataset contains 10 second excerpts of audio that are partially labeled for the presence or absence of 20 instrument classes. Our results indicated that our probes were unable to match state-of-the-art performance. Further investigation also revealed that while some of the best performing models were achieved with few to no hidden layers, the probes still learn a complicated representation of Jukebox output features.</p>
-								<p>Our full report is below and code is<a href = 'https://github.com/mconati/E208'> here </a></p>
+								<p>Our full report is <a href="https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/CALM.pdf">here</a> and code is<a href = 'https://github.com/mconati/E208'> here </a></p>
+								Embedded report:
 								<iframe src="https://drive.google.com/file/d/1BrcJW-Lda-B1bNtUYVFKy2UVgKqppKd2/preview" width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="resume">
 								<h2 class="major">Marco's Resume</h2>
 								<iframe src="https://drive.google.com/file/d/1FxF72-2_78fectQ97pEwTHJwzuOEG99m/preview" width="100%" height="785" allow="autoplay"></iframe>
+								If the embedding is broken, <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/MConati_Resume.pdf'>here</a> is a link to it!
 							</article>
 
 							<article id="TsaiDL">
@@ -163,8 +169,7 @@
 							<article id="Torch">
 								<h2 class="major">Learning Pytorch</h2>
 								<span class="image main"><img src="images/torch.png" alt="" /></span>
-								<p>During the pandemic, I wanted to learn more about how neural nets are built in practice. In researching this, I found the Pytorch libraries. While studying Pytorch, I made the document below. While my document generally follows the official Pytorch tutorials, it is more in line with my thought process while learning, with slightly less organization and frequent detours to fill in gaps (like why are GPUs good for Deep Learning):</p>
-								<iframe src="https://drive.google.com/file/d/15aYR7K2tNkMU-DXOkBkvDvCu6TsnZFez/preview" width="100%" height="600" allow="autoplay"></iframe>
+								<p>During the pandemic, I wanted to learn more about how neural nets are built in practice. In researching this, I found the Pytorch libraries. While studying Pytorch, I made <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/torch.pdf'>this</a> document. While my document generally follows the official Pytorch tutorials, it is very informal and more in line with my thought process while learning. This manifests as much less organization and frequent detours to fill in gaps (like why are GPUs good for Deep Learning):</p>
 							</article>
 							<article id="Alphazero">
 								<h2 class="major">Recreating AlphaZero</h2>
@@ -183,22 +188,21 @@
 									<span class="image main"><img src="images/blimpPath.png" alt="" /></span>
 								<p>The EKF uses vehicle dynamics to predict the position, and updates are made with the measurement value(although the measurement noise is considered in the correction step). Here is the <a href = 'https://github.com/mconati/E208andE205/blob/main/MConati_Blimp_EKF.ipynb'>code</a>, with thorough comments!</p>
 							</article>
-							<article id="Pendulum">
-								<h2 class="major">Inverted Pendulum Simulation</h2>
-								<span class="image main"><img src="images/IP.png" alt="" /></span>
-								<p></p>
-							</article>
 							<article id="e80">
 								<h2 class="major">PID-based Aquatic Robot</h2>
 								<span class="image main"><img src="images/e80.png" alt="" /></span>
-								<p>Sorry for the grainy picture, this project is from 2018 and at the time of making this site I have lost a lot of the materials. For this project, I worked in a team to build an Aquatic robot with homemade sensors. The robot was meant to navigate around Dana Point and collect water clarity, turbidity, and wind speed. A report detailing the homemade sensors is <a href="./report.pdf">here(pdf).</a></p> I was primarily responsible for the navigation. Unfortunately, I lost the code at some point, but our robot was generally able to navigate well. The PID was purely GPS based(and our GPS had 3 m uncertainty), so the robot movement was pretty crude. Here is an example of it heading to a waypoint and back:</p>
+								<p>Sorry for the grainy picture, this project is from 2018 and at the time of making this site I have lost a lot of the materials. For this project, I worked in a team to build an Aquatic robot with homemade sensors. The robot was meant to navigate around Dana Point and collect water clarity, turbidity, and wind speed. <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/AquaticAV.pdf'>Here</a> is our report detailing the homemade sensors:</p>
+								Embedded report:
+								<iframe src="https://drive.google.com/file/d/10OWC-NB_38GZv3NSdP4KPEyNksLn1LR6/preview" width="100%" height="600" allow="autoplay"></iframe>
+								<p>I was primarily responsible for the navigation. Unfortunately, I lost the code at some point, but our robot was generally able to navigate well. The PID was purely GPS based(and our GPS had 3 m uncertainty), so the robot movement was pretty crude. Here is an example of it heading to a waypoint and back:</p>
 								<span class="image main"><img src="images/e80Path.png" alt="" /></span>
-
 							</article>
 							<article id="Drone">
 								<h2 class="major">Particle filter localization</h2>
 								<span class="image main"><img src="images/PF.png" alt="" /></span>
-								<p> This project involved localizing a simple robot using its onboard LIDAR and IMU. The prediction step was conducted using the robot's IMU data and system dynamics, while the LIDAR was used for localization corrections. Our predicted path closely mirrored the actual, "desired" path, and outperformed pure GPS localization. I worked on this project in a group(with Evan Hassman and Bowen Jiang) for the State Estimation course(E205) at Harvey Mudd. E205 was unique in that there were only four labs during the semester, so each of them was quite intensive(and that's why I justified including this as a project). Here is our <a href='./Lab4.pdf'>report(pdf)</a> and our <a href = 'https://github.com/mconati/E208andE205/blob/main/Lab4.ipynb'>code!</a></a></p>
+								<p> This project involved localizing a simple robot using its onboard LIDAR and IMU. The prediction step was conducted using the robot's IMU data and system dynamics, while the LIDAR was used for localization corrections. Our predicted path closely mirrored the actual, "desired" path, and outperformed pure GPS localization. I worked on this project in a group(with Evan Hassman and Bowen Jiang) for the State Estimation course(E205) at Harvey Mudd. E205 was unique in that there were only four labs during the semester, so each of them was quite intensive(and that's why I justified including this as a project). Here is our <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/PFLocalization.pdf'>report</a> and <a href = 'https://github.com/mconati/E208andE205/blob/main/Lab4.ipynb'>code</a>!</a></p>
+								Embedded report:
+								<iframe src="https://drive.google.com/file/d/1vTsnt1TdV92INgLW-AfM3KXk-prkpNHl/preview" width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="Syntiant">
 								<h2 class="major">Door Security-Syntiant</h2>
@@ -216,8 +220,9 @@
 									corrections. My event detection system passed frames of 1-D sensor data to Syntiant's NDP120
 									deep learning processor, where an onboard CNN identified key door events like knocking and
 									opening. We were able to successfully deliver a prototype to Syntiant for further development
-									into a marketable product. Unfortunately, as this project was completed for a company, the code is closed due to an NDA. But, <a href = './Syntiant.pdf'>this(pdf)</a> poster about our project was signed off on for public viewing:</p>
-								
+									into a marketable product. Unfortunately, as this project was completed for a company, the code is closed due to an NDA. But, <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/Syntiant.pdf'>this(pdf)</a> poster about our project was signed off on for public viewing:</p>
+									Embedded poster:
+									<iframe src="https://drive.google.com/file/d/18bU1Bz8OM1ERzhGqKCWNl3hRMsxHPNqs/preview" width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="Millennium">
 								<h2 class="major">Spatial Navigation-Millennium</h2>
@@ -235,23 +240,17 @@
 									low-pass filters for isolating a 10 Hz sine wave from a 10 Hz pulse train. This requires a low-pass filter to remove all of the high frequency noise. One of the filters was
 									an analog 4 th order Butterworth filter, implemented directly on a breadboard using the Sallen-Key
 									circuit. The other filter was implemented digitally as a 10 th order comb filter. Both filters
-									successfully isolated the 10 Hz sine wave. Here is our <a href='./DigitalAnalog.pdf'> report(pdf)</a>. It has our Arduino and Matlab code at the end.</p>
+									successfully isolated the 10 Hz sine wave. Here is our <a href='https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/DigitalAnalog.pdf'> report(pdf)</a>. It has our Arduino and Matlab code at the end.</p>
+									Embedded report:
+									<iframe src="https://drive.google.com/file/d/1hWWA4k_bWVdaBxr6h0YpenTRBnLEgrG0/preview" width="100%" height="600" allow="autoplay"></iframe>	
 							</article>
 							<article id="MusicTrack">
 								<h2 class="major">Musical Performance Tracking</h2>
 								<span class="image main"><img src="images/perform.png" alt="" /></span>
 								<p>In conjunction with Brandon Apodaca, I created the backbone of a music tracking application. This system could ideally be adapted to create an application for following a performance and advancing the sheet music accordingly.</p>
-								<p>Our system utilized Dynamic Time Warping to align query audio to the reference music score in realtime. Our system was reliably able to converge for monophonic audio performances. Here is our <a href = './MusicTrack.pdf'>paper(pdf)</a> and our <a href = 'https://github.com/mconati/MusicStemsFinalProject'>code!</a></p>
-							</article>
-							<article id="e190">
-								<h2 class="major">Shazam Paper</h2>
-								<span class="image main"><img src="images/MusicTrack.png" alt="" /></span>
-								<p>This project</p>
-							</article>
-							<article id="hashTree">
-								<h2 class="major">Spellchecker</h2>
-								<span class="image main"><img src="images/binary.png" alt="" /></span>
-								<p></p>
+								<p>Our system utilized Dynamic Time Warping to align query audio to the reference music score in realtime. Our system was reliably able to converge for monophonic audio performances. Here is our <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/MusicTrack.pdf'>paper</a> and our <a href = 'https://github.com/mconati/MusicStemsFinalProject'>code!</a></p>
+								Embedded report:
+								<iframe src="https://drive.google.com/file/d/1_Et7j9NNSfIcnr4PC48ipJXyulj3lgi5/preview" width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="A">
 								<h2 class="major">A* search City Design</h2>
@@ -259,36 +258,113 @@
 								<p>I completed this project as a fun way to familiarize myself with A* search (and graph traversals in general). The motivation is that a city planner wants to add trails, gravel roads, and paved roads between n settlements, such that the longest travel time in the network doesn't exceed d days. In this scenario, no trail&lttrail&ltgravel&ltpaved for travel speed, but cost also increases as connection quality increases. So, this program wants to avoid making the more expensive connections if necessary.
 								This program is a tool that takes in n, d as parameters and plots a possible network that meets the requirements. Since this was just a learning experience, the program is not very smart. It works with the following pseudocode:</p>
 								
-								Given settlement locations [x,y], an equation f(distance, trail type) that gives travel time in days for a certain distance and trail type, and a maximum travel time d days, Loop:
-								<ul>
+								Given settlement locations [x,y], an equation f(distance, trail type) that gives travel time in days for a certain distance and trail type, and a maximum travel time d days.
+								<p></p>Loop:
+								<ol>
 								<li>Use A* to find the longest path in the current network in days</li>
-								<ul>
 								<li>If it is longer than d days, upgrade the longest path (nothing&lttrail&ltgravel&ltpaved)</li>
 								<li>Else if longest path is less than d days, return the network!</li>
-								</ul>
+							</ol>
+								<p></p>
 								<a href = 'https://github.com/mconati/MiscCode/blob/main/network.py'>The code</a> isn't the smartest since it will start making trails that might not end up getting used once better roads are built. But, it does do a good job avoiding roads until they are necessary, which could be valuable assuming roads are more costly. An easy improvement would be to make one final pass and remove unnecessary connections at the end. Here is an example of a generated network where n=15 settlements and d=15 days:
 								<span class="image main"><img src="images/Example.PNG" alt="" /></span>
 								It does exhibit some good behaviors like saving roads for long connections. But, it is certainly not ideal.
-							</ul>
+							
+							</article>
+
+							<article id="e190">
+								<h2 class="major">Shazam Paper</h2>
+								<span class="image main"><img src="images/STFT.png" alt="" /></span>
+								<p>I implemented the Shazam music recognition algorithm in numpy as a project for prof Tsai's DSP course. My system was able to reliably create a database of songs and then match noisy clips of those songs to the originals. The general algorithm is:</p>
+								For creating a database:
+								<ol>
+								<li>Take the Short-Time-Fourier-Transform of a song. The STFT contains information about which frequencies are present at different points in time. The cover art for this project is an STFT</li>
+								<li>Identify peaks in the STFT that have the highest magnitude. These points represent the "loudest" notes in the music and are thus most likely to represent the desired signal instead of background noise.</li>
+								<li>Pair peaks into hashes. A pair of peaks is defined by the frequency of peaks and the time between them. Hashes are more likely to be unique to a song(many songs will have the same notes, but pairs of notes are more unique)</li>
+								<li>Store a collection of hashes for each song. The greater the amount of hashes, the more space is necessary, but accuracy also increases</li>
+								</ol>
+								<p></p>
 								
+								For identifying a song:
+								<ol>
+								<li>Use the same process from creating the database to find hashes for the query</li>
+								<li>For each song in the database
+								<ol>
+								<li>Find all matching hashes between query and database song. Calculate the time difference = (time of hash in query)-(time of hash in database song) for each hash</li>
+								<li>Group the hash time differences into a histogram</li>
+								<li>The highest value in the histogram is the score for that database song. The intuition here is that the matching song will have many hashes with the same time offset (time offset caused by the clip not necessarily starting at the beginning of the song)</li>
+								</ol>
+								</li>
+								<li>Return the highest scoring database song</li>
+							
+							</ol>
+
+							</article>
+							<article id="CNN">
+								<h2 class="major">CNNs and Autoencoders</h2>
+								<span class="image main"><img src="images/CNN.png" alt="" /></span>
+								<p>To get practical experience with autoencoders, I solved the MNIST handwritten digit classification problem in two ways:</p>
+								<ol>
+									<li>Direct classification of handwritten digit images with a Convolutional Neural Net(CNN)</li>
+									<li>Training an autoencoder on digit images, and using it as the backbone for a CNN</li>
+								</ol>
+								<p></p>
+								I used a small dataset to make training more difficult. As a result, transfer learning from the autoencoder created a much smoother and quicker training curve. <a href="https://github.com/mconati/MiscCode/blob/main/CNNsAndRNNs/CNNTransferLearning.ipynb">Here</a> is my notebook!
+							</article>
+							<article id="LSTM">
+								<h2 class="major">LSTM Numerical Translation</h2>
+								<span class="image main"><img src="images/LSTM.png" alt="" /></span>
+								<p>As my first introduction to LSTMs and Sequence to Sequence models, I took on a numerical/word translation problem. Given a numerical symbol(I.E "8"), my LSTM would translate it to the word representation(I.E "eight"). My <a href = 'https://github.com/mconati/MiscCode/blob/main/CNNsAndRNNs/LSTMNumericalToWord.ipynb'>notebook</a> is split into three parts: </p>
+								<ol>
+									<li>Data Preparation and Research: First, I had to create the numerical/word dataset. I also had to research the sequence to sequency problem so that I could implement it in Pytorch.</li>
+									<li>Implement and Train the model: I trained the model using my dataset, plotting my loss as training progressed. I also experimeted with different model hyperparameters.</li>
+									<li>Analysis: I tried to identify what failure modes the model experienced.</li>
+								</ol>
+								<p></p>
+								My notebook is thoroughly commented, have fun checking it out!
+							</article>
+							<article id="RNN">
+								<h2 class="major">RNN Sentence Classification</h2>
+								<span class="image main"><img src="images/RNN.png" alt="" /></span>
+								<p>For my first project with Recurrent Neural Networks(RNNs), I created an RNN model to classify sequences of characters(sentences, words, letters) as Spanish or English. My <a href="https://github.com/mconati/MiscCode/blob/main/CNNsAndRNNs/RNNClassification.ipynb">notebook</a> does the following:</p>
+								<ol>
+									<li>Create a dataset: I started with the Spanish Billion Word Corpus and torchtext English Wikipedia text files. I created a Dataset of 100 character long chunks in each language.</li>
+									<li>Train the model: My RNN had a simple classifier, which used the RNN cell state at the end of a sequence to predict whether the sequence was Spanish or English </li>
+									<li>Experimentation: I experimented with various RNN hidden sizes and RNN layer numbers</li>
+									<li>Analysis: I tried to get intuition for what letters/phrased led to the RNN decision</li>
+								</ol>
+							</article>
+							<article id="Pendulum">
+								<h2 class="major">Inverted Pendulum Simulation</h2>
+								<span class="image main"><img src="images/IP.png" alt="" /></span>
+								<p>As the final project in Harvey Mudd's advanced signals and systems course, I designed and simulated an inverted pendulum on a cart subject to distrubances. Attached and embedded is my project <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/Inverted_Pend.pdf'>report!</a> My simulink diagrams and matlab code are at the end of my report.</p>
+								<iframe src="https://drive.google.com/file/d/1UJbaCOkoYJurHPpTJ-Pk0XWEhm1KBXvm/preview" width="100%" height="600" allow="autoplay"></iframe>
+							</article>
+							<article id="searches">
+								<h2 class="major">Testing array searches</h2>
+								<span class="image main"><img src="images/search.png" alt="" /></span>
+								<p>When I was learning about array-searching algorithms, I wanted to cement my understanding of them. To this end, I implemented bubble, selection, quick, and merge sort. Each program makes a randomized array of size 10000, and then measures the sorting process runtime, printing it out. The <a href = 'https://github.com/mconati/MiscCode/tree/main/Sorts'>code</a> is not too well commented since this was done as a learning experience.</p>
+							</article>
+							<article id="rats">
+								<h2 class="major">Solving a riddle</h2>
+								<span class="image main"><img src="images/rats.png" alt="" /></span>
+								<p>A fellow Mudder gave me the following riddle:
+									<p></p><i>Imagine you are a scientist with 2 rats, 9 bottles, and one hour. One bottle contains poison which will kill a rat in exactly 30 minutes if consumed. How can you feed the rats from the bottles to determine the poison? What if you had r rats and n minutes?</i>
+								</p>
+								<p>I thought this was pretty fun to solve, so I made a dynamic-programming solution for the r rat, n minute case <a href = 'https://github.com/mconati/MiscCode/blob/main/rats.py'>here!</a></p>
+							</article>
+							<article id="hashTree">
+								<h2 class="major">Spellchecker</h2>
+								<span class="image main"><img src="images/binary.png" alt="" /></span>
+								<p></p>
 							</article>
 							<article id="chunkystring">
 								<h2 class="major">Chunkystring</h2>
 								<span class="image main"><img src="images/C++.png" alt="" /></span>
 								<p></p>
 							</article>
-							<article id="searches">
-								<h2 class="major">Testing array searches</h2>
-								<span class="image main"><img src="images/search.png" alt="" /></span>
-								<p></p>
-							</article>
-							<article id="rats">
-								<h2 class="major">Solving a riddle</h2>
-								<span class="image main"><img src="images/rats.png" alt="" /></span>
-								<p></p>
-							</article>
 
-
+						
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
