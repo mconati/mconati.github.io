@@ -45,17 +45,17 @@
 								<p>Hello! I'm Marco, a Harvey Mudd graduate currently working as a Systems Engineer at Trellisware. I'm interested in AI and controls, hoping to contribute to the development of human-centered AI or intelligent robots someday. For a quick look into my background, check out my <a href = #resume>resume!</a> Or, for a much more thorough look at my technical work over the years, check out my <a href="#work">projects</a>.</p>
 								<p>On a less academic note, I'm a big fan of swimming, cooking, cats and riddles. Feel free to send me a <a href="#contact">message!</a></p>
 								<p><b>Ready for a swim at NCAAs 2022:</b></p>
-								<span class="image main"><img src="images/03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/03.jpg" loading='lazy'  alt="" /></span>
 								<p><b>Cooking with close ones:</b></p>
-								<span class="image main"><img src="images/02.jpg" alt="" /></span>
+								<span class="image main"><img src="images/02.jpg" loading='lazy' alt="" /></span>
 								<p><b>Family cats! Max on the left and Leo on the right:</b></p>
-								<span class="image main"><img src="images/01.jpg" alt="" /></span>
+								<span class="image main"><img src="images/01.jpg" loading='lazy' alt="" /></span>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Projects</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img src="images/pic02.jpg" loading='lazy' alt="" /></span>
 								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC and postgrad experiments. My most recent, large-scale code project is <a href = "#Chopin">Style Transfer with Transformers</a>, so I recommend checking out that project. Each item links to a small project summary page, and <b>bolded</b> projects are ones I'm most proud of:
 
 									<h4>Deep Learning/NLP</h4>
@@ -108,14 +108,14 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">Notes</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/pic03.jpg" loading='lazy' alt="" /></span>
 								<p>As an ongoing project, I have been transferring and reviewing my favorite notes from (and since) Mudd into digital format. I have built the basic framework for this site, so you can see what I have learned about, but it is currently only about 25% populated. I'm currently populating about 3 pages per week, so it should be done in mid-late 2023; right now, controls and reinforcement learning are the most populated. Also, brace your eyes, the html quality is dire. <a href="./website.html">Here it is!</a></p>
 							</article>
 						
 						<!-- Projects -->
 						<article id="Chopin">
 							<h2 class="major">Chopin Style Transfer</h2>
-							<span class="image main"><img src="images/Chopin.jpg" alt="" /></span>
+							<span class="image main"><img src="images/Chopin.jpg" loading='lazy' alt="" /></span>
 							<p>My code for this project is <a href = 'https://github.com/HMC-MIR/ChopinStyleTransfer/tree/main/MDEModels'>here.</a> This was my second project working with Prof Tsai in the MIR lab. 
 								<p> This project aimed to generate Chopin-esque piano scores. In my literature review, I found that state-of-the-art score
 								generation models struggled to emulate the long-term structure and style of human-composed
@@ -137,7 +137,7 @@
 						</article>
 							<article id="LRP">
 								<h2 class="major">Low-Resource Pretraining</h2>
-								<span class="image main"><img src="images/jukebox.png" alt="" /></span>
+								<span class="image main"><img src="images/jukebox.png" loading='lazy' alt="" /></span>
 								<p>My code for this project is <a href = 'https://github.com/HMC-MIR/LowSourcePretraining/tree/main/Jukebox/jukebox'>here.</a>
 								This was my first main project in the HMC MIR lab. It involved building upon the work of Stanford's Liang et al. in their Codified Audio
 								Language Modeling paper. I also build upon my previous experience with Liang et al.'s code from my <a href = "#CALM">instrument detection project</a>. They had demonstrated that audio features extracted from the middle
@@ -150,11 +150,11 @@
 							</article>
 							<article id="CALM">
 								<h2 class="major">Instrument Detection</h2>
-								<span class="image main"><img src="images/octopus.png" alt="" /></span>
+								<span class="image main"><img src="images/octopus.png" loading='lazy' alt="" /></span>
 								<p>Building upon the work of Stanford's Liang et. al, I worked with Alec Vercruysse to demonstrate that codified audio language modeling can learn useful representations for instrument identification. To this end, we used representations from layers within Jukebox: a generative model for music. Jukebox representations are used as input features to train shallow probes; each probe is trained to identify the presence of a specific instrument. As input data, the OpenMIC-2018 dataset was used. This dataset contains 10 second excerpts of audio that are partially labeled for the presence or absence of 20 instrument classes. Our results indicated that our probes were unable to match state-of-the-art performance. Further investigation also revealed that while some of the best performing models were achieved with few to no hidden layers, the probes still learn a complicated representation of Jukebox output features.</p>
 								<p>Our full report is <a href="https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/CALM.pdf">here</a> and code is<a href = 'https://github.com/mconati/E208'> here </a></p>
 								Embedded report:
-								<iframe src="https://drive.google.com/file/d/1BrcJW-Lda-B1bNtUYVFKy2UVgKqppKd2/preview" width="100%" height="600" allow="autoplay"></iframe>
+								<iframe src="https://drive.google.com/file/d/1BrcJW-Lda-B1bNtUYVFKy2UVgKqppKd2/preview" loading='lazy' width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="resume">
 								<h2 class="major">Marco's Resume</h2>
@@ -164,50 +164,50 @@
 
 							<article id="TsaiDL">
 								<h2 class="major">Numpy Neural Net</h2>
-								<span class="image main"><img src="images/numpy.png" alt="" /></span>
+								<span class="image main"><img src="images/numpy.png" loading='lazy' alt="" /></span>
 								<p>Full disclosure, this "project" is the result of homework in prof Tsai's deep learning for engineers course. For the first 4 weeks of the course, we slowly built the components of a neural net in numpy. This assignment involved putting those pieces(weight initialization, activation functions, loss function, forward/back prop, and gradient descent) together into one notebook. The neural net was then used as an autoencoder for representing 8 digits in a 3d space. My code is <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems/hw4'>here </a>. Also, the larger <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems'>dlStems </a> folder has other neat assignments from prof Tsai's course if you found this interesting!</p>
 							</article>
 							<article id="Torch">
 								<h2 class="major">Learning Pytorch</h2>
-								<span class="image main"><img src="images/torch.png" alt="" /></span>
+								<span class="image main"><img src="images/torch.png" loading='lazy' alt="" /></span>
 								<p>During the pandemic, I wanted to learn more about how neural nets are built in practice. In researching this, I found the Pytorch libraries. While studying Pytorch, I made <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/torch.pdf'>this</a> document. While my document generally follows the official Pytorch tutorials, it is very informal and more in line with my thought process while learning. This manifests as much less organization and frequent detours to fill in gaps (like why are GPUs good for Deep Learning):</p>
 							</article>
 							<article id="Alphazero">
 								<h2 class="major">Recreating AlphaZero</h2>
-								<span class="image main"><img src="images/chessbot.png" alt="" /></span>
+								<span class="image main"><img src="images/chessbot.png" loading='lazy' alt="" /></span>
 								<p>As a learning experience during the pandemic, I undertook a project with Natalia Orbach-Mandel and Ari Conati(my brother), to implement the <a href ='https://arxiv.org/abs/1712.01815'> AlphaZero</a> paper. This paper had revolutionized AI chess and Go bots in 2017, convincingly beating the world champion in each game. Our main goals were to learn about Pytorch, gain practical Reinforcement Learning experience, and have fun. Here is the <a href = 'https://github.com/AConati/amnom-chess'>code!</a> I am proud of this work because of the context; it represents us using the lockdown to better ourselves.</p>
 							</article>
 							<article id="DS">
 								<h2 class="major">Self-studying RL</h2>
-								<span class="image main"><img src="images/RL.png" alt="" /></span>
+								<span class="image main"><img src="images/RL.png" loading='lazy' alt="" /></span>
 								<p>In preparing to recreate AlphaZero, I completed David Silver's(one of the AlphaZero researchers) RL course on YouTube. While completing this course, I took pretty extensive notes, which I am transferring to digital form <a href = './notes/dl/RL.html'>here.</a></p>
 							</article>
 							<article id="BlimpKF">
 								<h2 class="major">EKF Blimp tracking</h2>
-								<span class="image main"><img src="images/blimp.png" alt="" /></span>
+								<span class="image main"><img src="images/blimp.png" loading='lazy' alt="" /></span>
 								<p>This project involved tracking a blimp using recorded(but very noisy) compass, GPS position, and thrust input data. The underlying, smooth path was determined using an EKF:</p>
-									<span class="image main"><img src="images/blimpPath.png" alt="" /></span>
+									<span class="image main"><img src="images/blimpPath.png" loading='lazy' alt="" /></span>
 								<p>The EKF uses vehicle dynamics to predict the position, and updates are made with the measurement value(although the measurement noise is considered in the correction step). Here is the <a href = 'https://github.com/mconati/E208andE205/blob/main/MConati_Blimp_EKF.ipynb'>code</a>, with thorough comments!</p>
 							</article>
 							<article id="e80">
 								<h2 class="major">PID-based Aquatic Robot</h2>
-								<span class="image main"><img src="images/e80.png" alt="" /></span>
+								<span class="image main"><img src="images/e80.png" loading='lazy' alt="" /></span>
 								<p>Sorry for the grainy picture, this project is from 2018 and at the time of making this site I have lost a lot of the materials. For this project, I worked in a team to build an Aquatic robot with homemade sensors. The robot was meant to navigate around Dana Point and collect water clarity, turbidity, and wind speed. <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/AquaticAV.pdf'>Here</a> is our report detailing the homemade sensors:</p>
 								Embedded report:
-								<iframe src="https://drive.google.com/file/d/10OWC-NB_38GZv3NSdP4KPEyNksLn1LR6/preview" width="100%" height="600" allow="autoplay"></iframe>
+								<iframe src="https://drive.google.com/file/d/10OWC-NB_38GZv3NSdP4KPEyNksLn1LR6/preview" loading='lazy' width="100%" height="600" allow="autoplay"></iframe>
 								<p>I was primarily responsible for the navigation. Unfortunately, I lost the code at some point, but our robot was generally able to navigate well. The PID was purely GPS based(and our GPS had 3 m uncertainty), so the robot movement was pretty crude. Here is an example of it heading to a waypoint and back:</p>
-								<span class="image main"><img src="images/e80Path.png" alt="" /></span>
+								<span class="image main"><img src="images/e80Path.png" loading='lazy' alt="" /></span>
 							</article>
 							<article id="Drone">
 								<h2 class="major">Particle filter localization</h2>
-								<span class="image main"><img src="images/PF.png" alt="" /></span>
+								<span class="image main"><img src="images/PF.png" loading='lazy' alt="" /></span>
 								<p> This project involved localizing a simple robot using its onboard LIDAR and IMU. The prediction step was conducted using the robot's IMU data and system dynamics, while the LIDAR was used for localization corrections. Our predicted path closely mirrored the actual, "desired" path, and outperformed pure GPS localization. I worked on this project in a group(with Evan Hassman and Bowen Jiang) for the State Estimation course(E205) at Harvey Mudd. E205 was unique in that there were only four labs during the semester, so each of them was quite intensive(and that's why I justified including this as a project). Here is our <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/PFLocalization.pdf'>report</a> and <a href = 'https://github.com/mconati/E208andE205/blob/main/Lab4.ipynb'>code</a>!</a></p>
 								Embedded report:
 								<iframe src="https://drive.google.com/file/d/1vTsnt1TdV92INgLW-AfM3KXk-prkpNHl/preview" width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="Syntiant">
 								<h2 class="major">Door Security-Syntiant</h2>
-								<span class="image main"><img src="images/Syntiant.png" alt="" /></span>
+								<span class="image main"><img src="images/Syntiant.png" loading='lazy' alt="" /></span>
 								<p>This was my senior capstone project, where I served as Team
 									Lead for a group of five students in collaboration with Syntiant Corporation. We developed an
 									entrance security system composed of a battery-powered tag that can be deployed on doors in
@@ -223,11 +223,11 @@
 									opening. We were able to successfully deliver a prototype to Syntiant for further development
 									into a marketable product. Unfortunately, as this project was completed for a company, the code is closed due to an NDA. But, <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/Syntiant.pdf'>this(pdf)</a> poster about our project was signed off on for public viewing:</p>
 									Embedded poster:
-									<iframe src="https://drive.google.com/file/d/18bU1Bz8OM1ERzhGqKCWNl3hRMsxHPNqs/preview" width="100%" height="600" allow="autoplay"></iframe>
+									<iframe src="https://drive.google.com/file/d/18bU1Bz8OM1ERzhGqKCWNl3hRMsxHPNqs/preview" loading='lazy' width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="Millennium">
 								<h2 class="major">Spatial Navigation-Millennium</h2>
-								<span class="image main"><img src="images/space.png" alt="" /></span>
+								<span class="image main"><img src="images/space.png" loading='lazy' alt="" /></span>
 								<p>This was my junior clinic project, where I worked in conjunction with four other Harvey Mudd students and liaisons from Millennium Space Systems.
 									 We were tasked with augmenting a star tracker system to localize a Low Earth Orbit satellite in the event of a GPS lockout. We developed two means to do this. The first 
 									 used the Earth's horizon as a reference, which could then localize the satellite in conjunction with the star tracker's attitude quaternion. Our second 
@@ -236,7 +236,7 @@
 							</article>
 							<article id="AnalogDigitalFilter">
 								<h2 class="major">Analog and Digital Filters</h2>
-								<span class="image main"><img src="images/sallen.png" alt="" /></span>
+								<span class="image main"><img src="images/sallen.png" loading='lazy' alt="" /></span>
 								<p>As a final project in my junior year, I worked with a lab partner to design and implement two
 									low-pass filters for isolating a 10 Hz sine wave from a 10 Hz pulse train. This requires a low-pass filter to remove all of the high frequency noise. One of the filters was
 									an analog 4 th order Butterworth filter, implemented directly on a breadboard using the Sallen-Key
@@ -247,15 +247,15 @@
 							</article>
 							<article id="MusicTrack">
 								<h2 class="major">Musical Performance Tracking</h2>
-								<span class="image main"><img src="images/perform.png" alt="" /></span>
+								<span class="image main"><img src="images/perform.png" loading='lazy' alt="" /></span>
 								<p>In conjunction with Brandon Apodaca, I created the backbone of a music tracking application. This system could ideally be adapted to create an application for following a performance and advancing the sheet music accordingly.</p>
 								<p>Our system utilized Dynamic Time Warping to align query audio to the reference music score in realtime. Our system was reliably able to converge for monophonic audio performances. Here is our <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/MusicTrack.pdf'>paper</a> and our <a href = 'https://github.com/mconati/MusicStemsFinalProject'>code!</a></p>
 								Embedded report:
-								<iframe src="https://drive.google.com/file/d/1_Et7j9NNSfIcnr4PC48ipJXyulj3lgi5/preview" width="100%" height="600" allow="autoplay"></iframe>
+								<iframe src="https://drive.google.com/file/d/1_Et7j9NNSfIcnr4PC48ipJXyulj3lgi5/preview" loading='lazy' width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="A">
 								<h2 class="major">A* search City Design</h2>
-								<span class="image main"><img src="images/radio.png" alt="" /></span>
+								<span class="image main"><img src="images/radio.png" loading='lazy' alt="" /></span>
 								<p>I completed this project as a fun way to familiarize myself with A* search (and graph traversals in general). The motivation is that a city planner wants to add trails, gravel roads, and paved roads between n settlements, such that the longest travel time in the network doesn't exceed d days. In this scenario, no trail&lttrail&ltgravel&ltpaved for travel speed, but cost also increases as connection quality increases. So, this program wants to avoid making the more expensive connections if necessary.
 								This program is a tool that takes in n, d as parameters and plots a possible network that meets the requirements. Since this was just a learning experience, the program is not very smart. It works with the following pseudocode:</p>
 								
@@ -268,14 +268,14 @@
 							</ol>
 								<p></p>
 								<a href = 'https://github.com/mconati/MiscCode/blob/main/network.py'>The code</a> isn't the smartest since it will start making trails that might not end up getting used once better roads are built. But, it does do a good job avoiding roads until they are necessary, which could be valuable assuming roads are more costly. An easy improvement would be to make one final pass and remove unnecessary connections at the end. Here is an example of a generated network where n=15 settlements and d=15 days:
-								<span class="image main"><img src="images/Example.PNG" alt="" /></span>
+								<span class="image main"><img src="images/Example.PNG" loading='lazy' alt="" /></span>
 								It does exhibit some good behaviors like saving roads for long connections. But, it is certainly not ideal.
 							
 							</article>
 
 							<article id="e190">
 								<h2 class="major">Shazam Paper</h2>
-								<span class="image main"><img src="images/STFT.png" alt="" /></span>
+								<span class="image main"><img src="images/STFT.png" loading='lazy' alt="" /></span>
 								<p>I implemented the Shazam music recognition algorithm in numpy as a project for prof Tsai's DSP course. My system was able to reliably create a database of songs and then match noisy clips of those songs to the originals. The general algorithm is:</p>
 								For creating a database:
 								<ol>
@@ -303,7 +303,7 @@
 							</article>
 							<article id="CNN">
 								<h2 class="major">CNNs and Autoencoders</h2>
-								<span class="image main"><img src="images/CNN.png" alt="" /></span>
+								<span class="image main"><img src="images/CNN.png" loading='lazy' alt="" /></span>
 								<p>To get practical experience with autoencoders, I solved the MNIST handwritten digit classification problem in two ways:</p>
 								<ol>
 									<li>Direct classification of handwritten digit images with a Convolutional Neural Net(CNN)</li>
@@ -314,7 +314,7 @@
 							</article>
 							<article id="LSTM">
 								<h2 class="major">LSTM Numerical Translation</h2>
-								<span class="image main"><img src="images/LSTM.png" alt="" /></span>
+								<span class="image main"><img src="images/LSTM.png" loading='lazy' alt="" /></span>
 								<p>As my first introduction to LSTMs and Sequence to Sequence models, I took on a numerical/word translation problem. Given a numerical symbol(I.E "8"), my LSTM would translate it to the word representation(I.E "eight"). My <a href = 'https://github.com/mconati/MiscCode/blob/main/CNNsAndRNNs/LSTMNumericalToWord.ipynb'>notebook</a> is split into three parts: </p>
 								<ol>
 									<li>Data Preparation and Research: First, I had to create the numerical/word dataset. I also had to research the sequence to sequency problem so that I could implement it in Pytorch.</li>
@@ -326,7 +326,7 @@
 							</article>
 							<article id="RNN">
 								<h2 class="major">RNN Sentence Classification</h2>
-								<span class="image main"><img src="images/RNN.png" alt="" /></span>
+								<span class="image main"><img src="images/RNN.png" loading='lazy' alt="" /></span>
 								<p>For my first project with Recurrent Neural Networks(RNNs), I created an RNN model to classify sequences of characters(sentences, words, letters) as Spanish or English. My <a href="https://github.com/mconati/MiscCode/blob/main/CNNsAndRNNs/RNNClassification.ipynb">notebook</a> does the following:</p>
 								<ol>
 									<li>Create a dataset: I started with the Spanish Billion Word Corpus and torchtext English Wikipedia text files. I created a Dataset of 100 character long chunks in each language.</li>
@@ -337,18 +337,18 @@
 							</article>
 							<article id="Pendulum">
 								<h2 class="major">Inverted Pendulum Simulation</h2>
-								<span class="image main"><img src="images/IP.png" alt="" /></span>
+								<span class="image main"><img src="images/IP.png" loading='lazy' alt="" /></span>
 								<p>As the final project in Harvey Mudd's advanced signals and systems course, I designed and simulated an inverted pendulum on a cart subject to distrubances. Attached and embedded is my project <a href = 'https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/Inverted_Pend.pdf'>report!</a> My simulink diagrams and matlab code are at the end of my report.</p>
-								<iframe src="https://drive.google.com/file/d/1UJbaCOkoYJurHPpTJ-Pk0XWEhm1KBXvm/preview" width="100%" height="600" allow="autoplay"></iframe>
+								<iframe src="https://drive.google.com/file/d/1UJbaCOkoYJurHPpTJ-Pk0XWEhm1KBXvm/preview" loading='lazy' width="100%" height="600" allow="autoplay"></iframe>
 							</article>
 							<article id="searches">
 								<h2 class="major">Testing array searches</h2>
-								<span class="image main"><img src="images/search.png" alt="" /></span>
+								<span class="image main"><img src="images/search.png" loading='lazy' alt="" /></span>
 								<p>When I was learning about array-searching algorithms, I wanted to cement my understanding of them. To this end, I implemented bubble, selection, quick, and merge sort. Each program makes a randomized array of size 10000, and then measures the sorting process runtime, printing it out. The <a href = 'https://github.com/mconati/MiscCode/tree/main/Sorts'>code</a> is not too well commented since this was done as a learning experience.</p>
 							</article>
 							<article id="rats">
 								<h2 class="major">Solving a riddle</h2>
-								<span class="image main"><img src="images/rats.png" alt="" /></span>
+								<span class="image main"><img src="images/rats.png" loading='lazy' alt="" /></span>
 								<p>A fellow Mudder gave me the following riddle:
 									<p></p><i>Imagine you are a scientist with 2 rats, 9 bottles, and one hour. One bottle contains poison which will kill a rat in exactly 30 minutes if consumed. How can you feed the rats from the bottles to determine the poison? What if you had r rats and n minutes?</i>
 								</p>
@@ -356,7 +356,7 @@
 							</article>
 							<article id="hashTree">
 								<h2 class="major">Datastructures</h2>
-								<span class="image main"><img src="images/binary.png" alt="" /></span>
+								<span class="image main"><img src="images/binary.png" loading='lazy' alt="" /></span>
 								<p>For Harvey Mudd's Datastructures course, we completed a variety of courses to build comfort with C++ and familiarity with common datastructures. This project highlights a few of my favorites. Each element in the list links to my code for the course:</p>
 								<ol>
 									<li><a href = 'https://github.com/mconati/DataStructures/tree/main/LinkedList'>Linked List implementation</a></li>
