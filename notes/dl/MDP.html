@@ -15,11 +15,29 @@
             <a href="./DL.html">Deep Learning and Reinforcement Learning</a> 
         </li>
         <h2>Overall Idea</h2>
-        A Markov process is one where the dynamics can be described entirely by a finite set of states and transition probabilities. In this system, the behavior at each timestep depends only on the previous timestep. (I.E state(t) depends only on state(t-1), not state(t-100)).
+        A Markov process is one where the dynamics can be described entirely by a finite set of states and transition probabilities. In this system, the behavior at each timestep depends only on the previous timestep. (I.E state(t) depends only on state(t-1), not state(t-100)). In order to map a real 
+        system to an MDP, you must define the problem with:
+        <li>States S</li>
+        <li>Actions A</li>
+        <li>Transition function P(s' |s, a)</li>
+        <li>Reward function R(s, a, s')</li>
+        <li>Discounting factor gamma with horizon H (how far do we look ahead for rewards)</li>
+        <li>Starting state s0</li>
+        Here, the goal is to maximize the expected reward:
+        $$max_{pi}E[\sum_{t=0}^H\gamma^tR(S_t, A_t, S_t+1)|\pi]$$
+        As an example, a walking robot could have:
+        <li>States S: Joints position and velocities</li>
+        <li>Actions A: motor torques</li>
+        <li>Transition function P(s' |s, a): Robot dynamics (how do torques result in angles, like a state space model)</li>
+        <li>Reward function R(s, a, s'): Design choice, I.E. making forward progress could make the robot run</li>
+        <li>Discounting factor gamma with horizon H (how far do we look ahead for rewards): Hyperparameter</li>
+        <li>Starting state s0: Initial joint positions and such</li>
         <p></p>
-        This sort of system can entirely be described by a 2d array of transition probabilities, where each row/column represents a state. Here is an example from David Silver's course, where C1, C2, ... are states and everything left blank has P=0:
+        Other model-able examples are cleaning robots, pole balancing, games, server management(how are requests managed), path planning, animal/person models.  
+        This sort of system can be described by a 2d array of transition probabilities, where each row/column represents a state. Here is an example from David Silver's course, where C1, C2, ... are states and everything left blank has P=0:
         <p></p>
         <img src="./Images/MDP.PNG" alt="Italian Trulli">
+        <p></p>
         In reinforcement learning, MPs become interesting when rewards are added(MRPs). For a given trajectory, the reward is defined as the discounted total reward from time-step t. This is formulated by summing the reward at the immediate timestep and the discounted reward at the following timestep:
         $$G = \sum_{k=0}^{inf}\gamma^{k}R_{t+k+1} = R_{t+1} + \gamma R_{t+2}$$
         So, gamma close to 1 doesn't discount further reward. Motivation for discounting is that our model is imperfect, so estimated future rewards are uncertain. Also not discounting can cause infinite return loops. 
@@ -79,7 +97,7 @@
         <li>
             <a href="./DP.html">Value Iteration/Policy Iteration</a> 
         </li>
-
+        <h2>Example MDP: Gridworld</h2>
 
 
 
