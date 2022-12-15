@@ -135,6 +135,7 @@ def value_iteration(gridworld):
         else:
             values = temp   
     return values, policies
+    
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--size', dest = 'size', default = 20, help = 'size of gridworld')
