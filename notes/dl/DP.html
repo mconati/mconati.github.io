@@ -24,9 +24,14 @@
         <img src="./Images/Eval.PNG" alt="Italian Trulli">
         <p></p>
         Once backup is done, the value at each node is converged. This is the value function!
+        This is basically a special case of value iteration, where instead of taking the max over all possible actioons, the actions are chosen by a policy pi. This still converges as a special case of value iteration.
+        For a stochastic policy, a policy evaluation update is:
+        <img src="./Images/PE.png" alt="Italian Trulli">
+        <p></p>
 
         <h3>Control (AKA Policy Iteration)</h3>
         As a byproduct of Policy Evaluation, we got a value function. We can make a better policy from that policy by acting greedily with respect to the new value function. The iterative process of policy evaluation, act greedily, repeat is the control problem solution!
+        Specifically, policy iteration involves changing just the first step of a policy. For a given state s, the new policy will use the action with the max(sum over states (probability of new state given action,state)*((reward of transition) + (discounted value using original policy)))
         <img src="./Images/Iter.PNG" alt="Italian Trulli">
         <img src="./Images/policy.PNG" alt="Italian Trulli">
         <p></p>
@@ -42,6 +47,14 @@
         <img src="./Images/DP_.PNG" alt="Italian Trulli">
         <p></p>
 
+        <h2>Maximum entropy formulation</h2>
+        What if we want a more robust policy? MEF is an MDP solving tecnique with a distribution over near-optimal solutions. This is a more robust policy since a change in the environment disrupting then optimal policy may not disrupt another policy in the distribution. Also, learning is more robust since we collect more interesting data. I.E, usually data is collected with the current policy, but using a distribution of policies will yield more varied and exploratory data.
+        What is entropy?
+        It is a measure of uncertainty for a variable X. Sepcifically, the number of bits required to encode X *ON AVERAGE*.
+        <img src="./Images/entropy.png" alt="Italian Trulli">
+        <p></p>
+        Intuitively, we have a distribution over possible values. Common values can be encoded with low bits (i.e a 2 value distribution needs one bit). Wider distributions need more bits, but we can strategically use longer bit strings for uncommon data.
+        
     </body>
 
 </html>

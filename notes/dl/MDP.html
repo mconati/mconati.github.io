@@ -97,13 +97,23 @@
         <li>
             <a href="./DP.html">Value Iteration/Policy Iteration</a> 
         </li>
-        <h2>Example MDP: Gridworld</h2>
+        <h2>Convergence</h2>
+        Let V*(s) be the expected sum of rewards from s, acting optimally for infinite steps. V*h(s) is the same but for H steps. Then V*(s)-V*h(s) = Reward from H+1, H+2..... 
+        The sum of these rewards can be written as an equation:
+        $$\gamma^{H+1}R_{H+1} + .....$$
+        Which is upper bounded by :
+        $$\gamma^{H+1}R_{max} + .....$$
+        Which is a geometric series:
+        $$\frac{\gamma^{H+1}}{1-\gamma} * R_{max}$$
+        As H gets larger, these extra rewards that the horizon method missed get very small due to the gamma term in the numerator. So, it converges quickly to the infinite horizon case.
+        An alternative proof is with contractions. The main intuition is that any two random value functions used as starting points get pulled towards the same, true value function. Since they get closer in this space, there is a contraction and convergence will happen.
 
+        <h2>Q values</h2>
+        Q values give the expected value of starting in a state s, takiing an action a, and then acting optimally.
 
-
-
-
-
+        $$Q(s, a) = \sum_{s' in S}(p(s'|s, a)*(R(s, a, s') + \gamma*Q^{max}(s', a'))$$
+        Value iteration can be done with Q values as well. In this case, the gridworld will have four options in each cell (one for each possible action direction) and each option has a separate Q-value
+        
         <p></p>
     </body>
 
