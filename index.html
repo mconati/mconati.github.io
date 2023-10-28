@@ -42,7 +42,7 @@
 							<article id="intro">
 								<h2 class="major">About me</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Hello! I'm Marco, a Harvey Mudd graduate currently working as a Systems Engineer at Trellisware. I'm interested in AI and controls, hoping to contribute to the development of human-centered AI or intelligent robots someday. For a quick look into my background, check out my <a href = #resume>resume!</a> Or, for a much more thorough look at my technical work over the years, check out my <a href="#work">projects</a>.</p>
+								<p>Hello! I'm Marco, a current MS Robotics student at the University of Michigan. My previous exploits include a BS Engineering from Harvey Mudd and 1 year stint as a Systems Engineer at Trellisware Technologies. I'm interested in AI and controls, hoping to contribute to the development of human-centered AI or intelligent robots. For a quick look into my background, check out my <a href = #resume>resume!</a> Or, for a much more thorough look at my technical work over the years, check out my <a href="#work">projects</a>.</p>
 								<p>On a less academic note, I'm a big fan of swimming, cooking, cats and riddles. Feel free to send me a <a href="#contact">message!</a></p>
 								<p><b>Ready for a swim at NCAAs 2022:</b></p>
 								<span class="image main"><img src="images/03.jpg" loading='lazy'  alt="" /></span>
@@ -56,8 +56,22 @@
 							<article id="work">
 								<h2 class="major">Projects</h2>
 								<span class="image main"><img src="images/pic02.jpg" loading='lazy' alt="" /></span>
-								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC and postgrad experiments. My most recent, large-scale code project is <a href = "#Chopin">Style Transfer with Transformers</a>, so I recommend checking out that project. Each item links to a small project summary page, and <b>bolded</b> projects are ones I'm most proud of:
+								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC/UMich and personal projects. For an example of code I built and managed solo, I recommend checking out <a href = "#Chopin">Style Transfer with Transformers</a>. This is from my senior year undergrad (2 years ago), but my more recent research is not public (yet) and more recent projects (like ARMLAB), were done in a group. Each item links to a small project summary page, and <b>bolded</b> projects are ones I'm most proud of:
 
+									<h4>Classical Robotics/Controls</h4>
+									<li><a href = "#ROAHMlab"><b>ROAHM research - Improving Dynamic Behavior of RTD-Based Manipulation (current)</b></a></li>
+									<li><a href = "#ARMLAB"><b>ARMLAB - Programming a Robotic Manipulator for Basic Tasks</b></a></li>
+									<li><a href = "#BOTLAB"><b>BOTLAB - Making a Mini Forklift with the UMich MBot Platform (current)</b></a></li>
+									<li><a href = "#BRG"><b>BRG research- 3D Additive Printing with Control (current)</b></a></li>
+									<li><a href = "#BlimpKF"><b>Extended Kalman Filter Blimp tracking</b></a></li>
+									<li><a href = "#Syntiant"><b>Door Security System - Syntiant Clinic</b></a></li>
+									<li><a href = "#Drone"> <b>Particle Filter Localization of a simple robot</b></a></li>
+									<li><a href = "#Pendulum">State Space Inverted Pendulum Simulation in Simulink</a></li>
+									<li><a href = "#e80">PID-based Aquatic Robot</a></li>
+									<li><a href = "#Millennium">Spatial Navigation - Millennium Clinic</a></li>
+
+
+									<p></p>
 									<h4>Deep Learning/NLP</h4>
 									<li><a href = "#Chopin"><b>Style Transfer with Transformers (HMC MIR research)</b></a></li>
 									<li><a href = "#LRP"><b>Low-Resource Pretraining with Jukebox (HMC MIR research)</b></a></li>
@@ -73,17 +87,6 @@
 									<li><a href = "#Alphazero"><b>Recreating Alphazero</b></a></li>
 									<li><a href = "#DS">RL with David Silver</a></li>
 									
-									
-								
-									<p></p>
-									<h4>Classical Robotics/Controls</h4>
-									<li><a href = "#BlimpKF"><b>Extended Kalman Filter Blimp tracking</b></a></li>
-									<li><a href = "#Syntiant"><b>Door Security System - Syntiant Clinic</b></a></li>
-									<li><a href = "#Drone"> <b>Particle Filter Localization of a simple robot</b></a></li>
-									<li><a href = "#Pendulum">State Space Inverted Pendulum Simulation in Simulink</a></li>
-									<li><a href = "#e80">PID-based Aquatic Robot</a></li>
-									<li><a href = "#Millennium">Spatial Navigation - Millennium Clinic</a></li>
-					
 
 									<p></p>
 									<h4>Signal Processing</h4>
@@ -106,11 +109,11 @@
 							</article>
 
 						<!-- About -->
-							<article id="about">
+							<!-- <article id="about">
 								<h2 class="major">Notes</h2>
 								<span class="image main"><img src="images/pic03.jpg" loading='lazy' alt="" /></span>
 								<p>As an ongoing project, I have been transferring and reviewing my favorite notes from (and since) Mudd into digital format. I have built the basic framework for this site, so you can see what I have learned about, but it is currently only about 25% populated. I'm currently populating about 3 pages per week, so it should be done in mid-late 2023; right now, controls and reinforcement learning are the most populated. Also, brace your eyes, the html quality is dire. <a href="./website.html">Here it is!</a></p>
-							</article>
+							</article> -->
 						
 						<!-- Projects -->
 						<article id="Chopin">
@@ -181,6 +184,28 @@
 								<h2 class="major">Self-studying RL</h2>
 								<span class="image main"><img src="images/RL.png" loading='lazy' alt="" /></span>
 								<p>In preparing to recreate AlphaZero, I completed David Silver's(one of the AlphaZero researchers) RL course on YouTube. While completing this course, I took pretty extensive notes, which I am transferring to digital form <a href = './notes/dl/RL.html'>here.</a></p>
+							</article>
+							<article id="ROAHMLab">
+								<h2 class="major">ROAHMLab research</h2>
+								<span class="image main"><img src="images/roahm.png" loading='lazy' alt="" /></span>
+								<p>I am working with Professor Vasudevan's ROAHM lab, with the goal of enhancing the dynamic behavior of his robotic manipulators. The code I am building is based off of <a href ='https://github.com/roahmlab/armour-dev'> armour-dev</a>. Armour-dev provide provably safe, real time manipulator motion (I recommend reading the paper to see how its guarenteed!). However, this motion tends to be conservative, with joint velocities leveling off well below their limits. I am designing and running experiments to identify/correct this behavior. Some
+									examples of limiting factors could be overly strict constraints
+									in the trajectory planner, introducing soft velocity constraints in the optimization problem, and reformatting the high level planner to pick more aggressive waypoints.</p>
+							</article>
+							<article id="ARMLAB">
+								<h2 class="major">ARMLAB</h2>
+								<span class="image main"><img src="images/armlab.png" loading='lazy' alt="" /></span>
+								<p>This project was completed in a group during my first half-semester at UMich. We programmed a 5-DOF arm to recognize and localize blocks, path plan, and complete pick and place/stacking tasks. I wrote all of our forward and inverse kinematics code for this project, and worked in a pair to develop our simple motion planner. Our code for this project is available <a href ='https://github.com/roahmlab/armour-dev'> here</a>.</p>
+							</article>
+							<article id="BOTLAB">
+								<h2 class="major">Numpy Neural Net</h2>
+								<span class="image main"><img src="images/numpy.png" loading='lazy' alt="" /></span>
+								<p>Full disclosure, this "project" is the result of homework in prof Tsai's deep learning for engineers course. For the first 4 weeks of the course, we slowly built the components of a neural net in numpy. This assignment involved putting those pieces(weight initialization, activation functions, loss function, forward/back prop, and gradient descent) together into one notebook. The neural net was then used as an autoencoder for representing 8 digits in a 3d space. My code is <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems/hw4'>here </a>. Also, the larger <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems'>dlStems </a> folder has other neat assignments from prof Tsai's course if you found this interesting!</p>
+							</article>
+							<article id="BRG">
+								<h2 class="major">Numpy Neural Net</h2>
+								<span class="image main"><img src="images/numpy.png" loading='lazy' alt="" /></span>
+								<p>Full disclosure, this "project" is the result of homework in prof Tsai's deep learning for engineers course. For the first 4 weeks of the course, we slowly built the components of a neural net in numpy. This assignment involved putting those pieces(weight initialization, activation functions, loss function, forward/back prop, and gradient descent) together into one notebook. The neural net was then used as an autoencoder for representing 8 digits in a 3d space. My code is <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems/hw4'>here </a>. Also, the larger <a href = 'https://github.com/mconati/E208andE205/tree/main/dlStems'>dlStems </a> folder has other neat assignments from prof Tsai's course if you found this interesting!</p>
 							</article>
 							<article id="BlimpKF">
 								<h2 class="major">EKF Blimp tracking</h2>
