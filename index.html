@@ -59,10 +59,10 @@
 								<p>Here is a running list of my completed projects, ranging from silly programs to research at HMC/UMich and personal projects. For an example of code I built and managed solo, I recommend checking out <a href = "#Chopin">Style Transfer with Transformers</a>. This is from my senior year undergrad (2 years ago), but my more recent research is not public (yet) and more recent projects (like ARMLAB), were done in a group. Each item links to a small project summary page, and <b>bolded</b> projects are ones I'm most proud of:
 
 									<h4>Classical Robotics/Controls</h4>
-									<li><a href = "#ROAHMlab"><b>ROAHM research - Improving Dynamic Behavior of RTD-Based Manipulation (current)</b></a></li>
+									<li><a href = "#ROAHM"><b>ROAHM research - Improving Dynamic Behavior of RTD-Based Manipulation (current)</b></a></li>
 									<li><a href = "#ARMLAB"><b>ARMLAB - Programming a Robotic Manipulator for Basic Tasks</b></a></li>
-									<li><a href = "#BOTLAB"><b>BOTLAB - Making a Mini Forklift with the UMich MBot Platform (current)</b></a></li>
-									<li><a href = "#BRG"><b>BRG research- 3D Additive Printing with Control (current)</b></a></li>
+									<li><a href = "#BOTLAB">BOTLAB - Making a Mini Forklift with the UMich MBot Platform (current)</a></li>
+									<li><a href = "#BRG">BRG research- 3D Additive Printing with Control (current)</a></li>
 									<li><a href = "#BlimpKF"><b>Extended Kalman Filter Blimp tracking</b></a></li>
 									<li><a href = "#Syntiant"><b>Door Security System - Syntiant Clinic</b></a></li>
 									<li><a href = "#Drone"> <b>Particle Filter Localization of a simple robot</b></a></li>
@@ -185,7 +185,7 @@
 								<span class="image main"><img src="images/RL.png" loading='lazy' alt="" /></span>
 								<p>In preparing to recreate AlphaZero, I completed David Silver's(one of the AlphaZero researchers) RL course on YouTube. While completing this course, I took pretty extensive notes, which I am transferring to digital form <a href = './notes/dl/RL.html'>here.</a></p>
 							</article>
-							<article id="ROAHMlab">
+							<article id="ROAHM">
 								<h2 class="major">ROAHMLab research (current)</h2>
 								<span class="image main"><img src="images/roahm.png" loading='lazy' alt="" /></span>
 								<p>I am working with Professor Vasudevan's ROAHM lab, with the goal of enhancing the dynamic behavior of his robotic manipulators. The code I am building is based off of <a href ='https://github.com/roahmlab/armour-dev'> armour-dev</a>. Armour-dev provide provably safe, real time manipulator motion (I recommend reading the paper to see how its guarenteed!). However, this motion tends to be conservative, with joint velocities leveling off well below their limits. I am designing and running experiments to identify/correct this behavior. Some
@@ -203,8 +203,8 @@
 								<p>In a group, I am building a mini forklift using the UMich MBot platform. MBot is unique as it can be built from relatively inexpensive parts (Jetson Nano, Raspberry pi, RPLidar, DC motors) and is open source. We will enhance the platform with a low level position controller, SLAM system, computer vision system for identifying mini crates, and 3D-printed gripper for grasping and moving said crates.</p>
 							</article>
 							<article id="BRG">
-								<h2 class="major">Barton Research Group (current)</h2>
-								<span class="image main"><img src="images/BRG.png" loading='lazy' alt="" /></span>
+								<h3 class="major">Barton Research Group (current)</h3>
+								<span class="image main"><img src="images/BRG.jpg" loading='lazy' alt="" /></span>
 								<p>Working for professors Dawn Tilbury and Kira Barton, I am developing software and a controller for a  3D additive manufacturing printer specializing in conductive materials. The printer uses air pressure to extrude a silver based ink, and an A3200 motion controller to move the substrate. I am developing a process model to relate printing parameters, such as air pressure and stage speed, to the width and resistivity of the resulting line. Then, the controller will incorporate visual feedback to ensure proper printing.</p>
 							</article>
 							<article id="BlimpKF">
