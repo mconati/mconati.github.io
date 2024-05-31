@@ -61,6 +61,7 @@
 
 									<h4>Classical Robotics/Controls</h4>
 									<li><a href = "#ROAHM"><b>ROAHM research - RTD-Suction (current)</b></a></li>
+									<li><a href = "#Filt"><b>Fun with Filters! EKF, UKF, GHKF, PF, PMCMC</b></a></li>
 									<li><a href = "#ARMLAB"><b>ARMLAB - Programming a Robotic Manipulator for Basic Tasks</b></a></li>
 									<li><a href = "#BOTLAB">BOTLAB - Making a Mini Forklift with the UMich MBot Platform</a></li>
 									<li><a href = "#BRG">BRG research- 3D Additive Printing with Control</a></li>
@@ -146,6 +147,12 @@
 								<p>This project involved applying the AutoRegressive with eXogenous inputs (ARX) model to estimate the dynamic coefficients of the classic Lotka-Volterra model, which describes the predator-prey dynamics between species, such as rabbits and foxes. By accurately modeling these interactions, we aimed to implement effective control strategies to manage population levels.
 								<p>I developed two distinct control approaches for regulating the rabbit population around a desired setpoint of 15 rabbits. First, a Linear Quadratic Regulator (LQR) was employed, which involved linearizing the model at each timestep to apply control inputs effectively. 
 								<p>Additionally, I explored a Reinforcement Learning (RL) strategy, where the model was rewarded for maintaining the rabbit population at the setpoint. To this end, I implemented and trained DDQN in Pytorch. Access my code at the bottom of the report, but note that it isn't my most organized work, as this wasn't a formal project.
+								</p></p>
+						</article>
+						<article id="Filt">
+							<h2 class="major">Pendulum Filter stuff</h2>
+							<span class="image main"><img src="images/LotkaVolterraControl.jpg" loading='lazy' alt="" /></span>
+							<p>Access my reports <a href="https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/Conati_project_3.pdf">here</a> and <a href="https://github.com/mconati/WebsitePDFs/blob/main/Website%20PDFs/Conati_project_Final.pdf">here</a> for full details. The first report implements and compares EKF, UKF, GHKF, and PF on a simple pendulum. The second report extends these filter techniques, implementing ERTSS and PMCMC for both system identification and smoothing tasks. 
 								</p></p>
 						</article>
 						
